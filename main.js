@@ -8,7 +8,7 @@ const usefulPlugins = require("./tools/usefulPlugins");
 const decodeOb = require("./tools/decodeOb");
 const config = require("./tools/config");
 const tool = require("./tools/decode");
-
+const consoleColor = require("./tools/consoleColor");
 
 if (process.argv.length > 2) {
     let encodeFile = process.argv[2], outPutFile = "decrypted.js", sourceCode = encodeFile;
