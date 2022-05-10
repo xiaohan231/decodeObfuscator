@@ -1,361 +1,307 @@
 /*****************************************************
-Õ®”√≤Âº˛∫œºØ:
+ÈÄöÁî®Êèí‰ª∂ÂêàÈõÜ:
 
 Module name:usefulPugins.js
-Author:‘√¿¥øÕ’ªµƒ¿œ∞Â
+Author:ÊÇ¶Êù•ÂÆ¢Ê†àÁöÑËÄÅÊùø
 Date:2022.02.19
 Version:V1.4.0
 
 
 
 *****************************************************/
-const babel = require("./babel_asttool.js");
-const types = t;
 
-//≈–∂œΩ⁄µ„‘™Àÿ «∑ÒŒ™◊÷√Ê¡ø
+//Âà§Êñ≠ËäÇÁÇπÂÖÉÁ¥†ÊòØÂê¶‰∏∫Â≠óÈù¢Èáè
 //eg.  ++123,-456,"789";
-function isBaseLiteral(path)
-{
-	if (path.isLiteral())
-	{
-		return true;
-	}
-	if (path.isUnaryExpression({operator:"-"}) || 
-	    path.isUnaryExpression({operator:"+"}))
-	{
-		return isBaseLiteral(path.get('argument'));
-	}
-	
-	return false;
-}
-
-
-//≈–∂œΩ⁄µ„‘™Àÿ[Arrays] «∑Ò»´≤øŒ™◊÷√Ê¡ø
-function isElementsLiteral(path)
-{
-	let key = null;
-	
-	if (path.isArrayExpression())
-	{
-		key = "elements";
-	}
-	else if(path.isObjectExpression())
-	{
-		key = "properties";
-	}
-	else if(path.isCallExpression())
-	{
-		key = "arguments";
-	}
-	else
-	{
-		return isBaseLiteral(path);
-	}
-	
-	let elements = path.get(key);
-	
-	if (elements.length == 0) return false;
-	
-	if (key == "properties")
-	{
-		return elements.every(element => isBaseLiteral(element.get("value")));
-	}
-	
-	return elements.every(element=>isBaseLiteral(element));
-}
-
-
-//πÊ∑∂For—≠ª∑∫ÕWhile—≠ª∑
-const standardLoop = 
-{
-	"ForStatement|WhileStatement"({node})
-	{
-		if(!types.isBlockStatement(node.body))
-    {
-    	node.body = types.BlockStatement([node.body]);
+function isBaseLiteral(path) {
+    if (path.isLiteral()) {
+        return true;
     }
-  },
-}
+    if (path.isUnaryExpression({
+        operator: "-"
+    }) || path.isUnaryExpression({
+        operator: "+"
+    })) {
+        return isBaseLiteral(path.get('argument'));
+    }
 
-const resolveSequence = 
-{
-	SequenceExpression(path)
-	{
-		let {scope,parentPath,node} = path;
-		let expressions = node.expressions;
-		if (parentPath.isReturnStatement({"argument":node}))
-		{
-			let lastExpression = expressions.pop();
-			for (let expression of expressions)
-			{
-				parentPath.insertBefore(types.ExpressionStatement(expression=expression));
-			}
-			
-			path.replaceInline(lastExpression);
-		}
-		else if (parentPath.isExpressionStatement({"expression":node}))
-		{
-			let body = [];
-			expressions.forEach(express=>{
-            body.push(types.ExpressionStatement(express));
-        });
-      path.replaceInline(body);
-		}
-		else
-		{
-			return;
-		}
-		
-		scope.crawl();
-	}
+    return false;
 }
 
 
+//Âà§Êñ≠ËäÇÁÇπÂÖÉÁ¥†[Arrays]ÊòØÂê¶ÂÖ®ÈÉ®‰∏∫Â≠óÈù¢Èáè
+function isElementsLiteral(path) {
+    let key = null;
+
+    if (path.isArrayExpression()) {
+        key = "elements";
+    } else if (path.isObjectExpression()) {
+        key = "properties";
+    } else if (path.isCallExpression()) {
+        key = "arguments";
+    } else {
+        return isBaseLiteral(path);
+    }
+
+    let elements = path.get(key);
+
+    if (elements.length == 0) return false;
+
+    if (key == "properties") {
+        return elements.every(element => isBaseLiteral(element.get("value")));
+    }
+
+    return elements.every(element => isBaseLiteral(element));
+}
+
+
+//ËßÑËåÉForÂæ™ÁéØÂíåWhileÂæ™ÁéØ
+const standardLoop = {
+    "ForStatement|WhileStatement" ({ node }) {
+        if (!t.isBlockStatement(node.body)) {
+            node.body = t.BlockStatement([node.body]);
+        }
+    },
+}
+//ÈÄóÂè∑Ë°®ËææÂºè
+const resolveSequence = {
+    SequenceExpression(path) {
+        let { scope, parentPath, node } = path;
+        let expressions = node.expressions;
+        if (parentPath.isReturnStatement({
+            "argument": node
+        })) {
+            let lastExpression = expressions.pop();
+            for (let expression of expressions) {
+                parentPath.insertBefore(t.ExpressionStatement(expression = expression));
+            }
+
+            path.replaceInline(lastExpression);
+        } else if (parentPath.isExpressionStatement({
+            "expression": node
+        })) {
+            let body = [];
+            expressions.forEach(express => {
+                body.push(t.ExpressionStatement(express));
+            });
+            path.replaceInline(body);
+        } else {
+            return;
+        }
+
+        scope.crawl();
+    }
+}
+
+//Â≠óÈù¢Èáè
 const simplifyLiteral = {
-	NumericLiteral({node}) {
-		if (node.extra && /^0[obx]/i.test(node.extra.raw)) {
-			node.extra = undefined;
-		}
-  },
-  StringLiteral({node}) 
-  {
-  	if (node.extra && /\\[ux]/gi.test(node.extra.raw)) {
-  		node.extra = undefined;
-    }
-  },
-}
-
-
-
-const constantFold = 
-{
-	  "BinaryExpression|UnaryExpression"(path)
-    {
-    	if(path.isUnaryExpression({operator:"-"}) || 
-    	   path.isUnaryExpression({operator:"void"}))
-    	{
-    		return;
-    	}
-    	const {confident,value} = path.evaluate();
-    	if (!confident || value == "Infinity") return;
-    	path.replaceWith(types.valueToNode(value));
+    NumericLiteral({ node }) {
+        if (node.extra && /^0[obx]/i.test(node.extra.raw)) {
+            node.extra = undefined;
+        }
+    },
+    StringLiteral({ node }) {
+        if (node.extra && /\\[ux]/gi.test(node.extra.raw)) {
+            node.extra = undefined;
+        }
     },
 }
 
 
-//…æ≥˝÷ÿ∏¥∂®“Â«“Œ¥±ª∏ƒ±‰≥ı º÷µµƒ±‰¡ø
+//Â∏∏ÈáèÊäòÂè†
+const constantFold = {
+    "BinaryExpression|UnaryExpression" (path) {
+        if (path.isUnaryExpression({
+            operator: "-"
+        }) || path.isUnaryExpression({
+            operator: "void"
+        })) {
+            return;
+        }
+        try {
+            const { confident, value } = path.evaluate();
+            if (!confident || value == "Infinity") return;
+            path.replaceWith(t.valueToNode(value));
+        } catch (e) {
+            //console.log("constantFold evaluate fail")
+        }
+    },
+}
+
+
+//Âà†Èô§ÈáçÂ§çÂÆö‰πâ‰∏îÊú™Ë¢´ÊîπÂèòÂàùÂßãÂÄºÁöÑÂèòÈáè
 const deleteRepeatDefine = {
-	"VariableDeclarator|FunctionDeclaration"(path)
-	{
-		let {node,scope,parentPath} = path;
-		
-		if (path.isFunctionDeclaration())
-		{
-			scope = parentPath.scope;
-		}
-		let name = node.id.name;
-		const binding = scope.getBinding(name);
-		if (path.isFunctionDeclaration())
-		{
-			if(!binding || binding.constantViolations.length > 1)
-			{
-				return;
-			}
-		}
-    else
-    {
-    	if(!binding || !binding.constant) return;
-    }
-    
-    scope.traverse(scope.block,{
-    	VariableDeclarator(path)
-    	{
-    		let {node,scope} = path;
-    		let {id,init} = node;
-    		if (!types.isIdentifier(init,{name:name})) return;
-    		
-    		const binding = scope.getBinding(id.name);
-    		
-    		if (!binding || !binding.constant) return;
-    	
-    		scope.rename(id.name,name);
-    		path.remove();
-    	},
-    })
-    
-    scope.crawl();     
-	},
-	 
+    "VariableDeclarator|FunctionDeclaration" (path) {
+        let { node, scope, parentPath } = path;
+
+        if (path.isFunctionDeclaration()) {
+            scope = parentPath.scope;
+        }
+        let name = node.id.name;
+        const binding = scope.getBinding(name);
+        if (path.isFunctionDeclaration()) {
+            if (!binding || binding.constantViolations.length > 1) {
+                return;
+            }
+        } else {
+            if (!binding || !binding.constant) return;
+        }
+
+        scope.traverse(scope.block, {
+            VariableDeclarator(path) {
+                let { node, scope } = path;
+                let { id, init } = node;
+                if (!t.isIdentifier(init, {
+                    name: name
+                })) return;
+
+                const binding = scope.getBinding(id.name);
+
+                if (!binding || !binding.constant) return;
+
+                scope.rename(id.name, name);
+                path.remove();
+            },
+        })
+
+        scope.crawl();
+    },
+
 }
 
 
 const keyToLiteral = {
-	MemberExpression:
-	{
-		exit({node})
-		{
-			const prop = node.property;
-			if (!node.computed && types.isIdentifier(prop))
-			{
-				node.property = types.StringLiteral(prop.name);
-				node.computed = true;
-			}
-    }
-  },	
-  ObjectProperty: 
-  {
-		exit({node})
-		{
-			const key = node.key;
-			if (!node.computed && types.isIdentifier(key))
-			{
-				node.key = types.StringLiteral(key.name);
-			}
-		}
-	},  
+    MemberExpression: {
+        exit({ node }) {
+            const prop = node.property;
+            if (!node.computed && t.isIdentifier(prop)) {
+                node.property = t.StringLiteral(prop.name);
+                node.computed = true;
+            }
+        }
+    },
+    ObjectProperty: {
+        exit({ node }) {
+            const key = node.key;
+            if (!node.computed && t.isIdentifier(key)) {
+                node.key = t.StringLiteral(key.name);
+            }
+        }
+    },
 }
 
 const preDecodeObject = {
-	VariableDeclarator({node,parentPath,scope})
-	{
-		const {id,init} = node;
-		if (!types.isObjectExpression(init)) return;
-		let name = id.name;
-		
-		let properties = init.properties;
-		let allNextSiblings = parentPath.getAllNextSiblings();
-		for (let nextSibling of allNextSiblings)
-		{
-			if (!nextSibling.isExpressionStatement())  break;
-			
-			let expression = nextSibling.get('expression');
-			if (!expression.isAssignmentExpression({operator:"="})) break;
+    VariableDeclarator({ node, parentPath, scope }) {
+        const { id, init } = node;
+        if (!t.isObjectExpression(init)) return;
+        let name = id.name;
 
-			let {left,right} = expression.node;
-			if (!types.isMemberExpression(left)) break;
-			
-			let {object,property} = left;
-			if (!types.isIdentifier(object,{name:name}) ||
-			    !types.isStringLiteral(property)) 
-		  {
-		  	break;
-		  }
-		  
-			properties.push(types.ObjectProperty(property,right));
-			nextSibling.remove();
-		}	
-		scope.crawl();	
-	},
+        let properties = init.properties;
+        let allNextSiblings = parentPath.getAllNextSiblings();
+        for (let nextSibling of allNextSiblings) {
+            if (!nextSibling.isExpressionStatement()) break;
+
+            let expression = nextSibling.get('expression');
+            if (!expression.isAssignmentExpression({
+                operator: "="
+            })) break;
+
+            let { left, right } = expression.node;
+            if (!t.isMemberExpression(left)) break;
+
+            let { object, property } = left;
+            if (!t.isIdentifier(object, {
+                name: name
+            }) || !t.isStringLiteral(property)) {
+                break;
+            }
+
+            properties.push(t.ObjectProperty(property, right));
+            nextSibling.remove();
+        }
+        scope.crawl();
+    },
 }
 
 const SimplifyIfStatement = {
-	"IfStatement"(path)
-	{
-		const consequent = path.get("consequent");
-    const alternate = path.get("alternate");
-    const test = path.get("test");
-    const evaluateTest = test.evaluateTruthy();
-    
-    if (!consequent.isBlockStatement())
-    {
-    	consequent.replaceWith(types.BlockStatement([consequent.node]));
-    }
-		if (alternate.node !== null && !alternate.isBlockStatement())
-		{
-			alternate.replaceWith(types.BlockStatement([alternate.node]));
-		}
-		
-		if (consequent.node.body.length == 0)
-		{
-			if (alternate.node == null)
-			{
-				path.replaceWith(test.node);
-			}
-			else
-			{
-				consequent.replaceWith(alternate.node);
-				alternate.remove();
-				path.node.alternate = null;
-        test.replaceWith(types.unaryExpression("!", test.node, true));
-			}
-		}
+    "IfStatement" (path) {
+        const consequent = path.get("consequent");
+        const alternate = path.get("alternate");
+        const test = path.get("test");
+        const evaluateTest = test.evaluateTruthy();
 
-		if (alternate.isBlockStatement() && alternate.node.body.length == 0)
-		{
-			alternate.remove();
-			path.node.alternate = null;
-		}
-		
-		if (evaluateTest === true)
-		{
-			path.replaceWithMultiple(consequent.node.body);
-		} 
-		else if (evaluateTest === false)
-		{ 
-			alternate.node === null? path.remove():path.replaceWithMultiple(alternate.node.body);
-		}
-  },
+        if (!consequent.isBlockStatement()) {
+            consequent.replaceWith(t.BlockStatement([consequent.node]));
+        }
+        if (alternate.node !== null && !alternate.isBlockStatement()) {
+            alternate.replaceWith(t.BlockStatement([alternate.node]));
+        }
+
+        if (consequent.node.body.length == 0) {
+            if (alternate.node == null) {
+                path.replaceWith(test.node);
+            } else {
+                consequent.replaceWith(alternate.node);
+                alternate.remove();
+                path.node.alternate = null;
+                test.replaceWith(t.unaryExpression("!", test.node, true));
+            }
+        }
+
+        if (alternate.isBlockStatement() && alternate.node.body.length == 0) {
+            alternate.remove();
+            path.node.alternate = null;
+        }
+
+        if (evaluateTest === true) {
+            path.replaceWithMultiple(consequent.node.body);
+        } else if (evaluateTest === false) {
+            alternate.node === null ? path.remove() : path.replaceWithMultiple(alternate.node.body);
+        }
+    },
 }
 
 const removeDeadCode = {
-	"IfStatement|ConditionalExpression"(path)
-	{
-		let {consequent,alternate} = path.node;
-		let testPath = path.get('test');
-		const evaluateTest = testPath.evaluateTruthy();
-		if (evaluateTest === true)
-		{
-			if (types.isBlockStatement(consequent))
-			{
-				consequent = consequent.body;
-			}
-			path.replaceWithMultiple(consequent);
-		}
-		else if (evaluateTest === false)
-		{
-			if (alternate != null)
-			{
-				if (types.isBlockStatement(alternate))
-			  {
-			  	alternate = alternate.body;
-			  }
-				path.replaceWithMultiple(alternate);
-			}
-			else
-			{
-				path.remove();
-			}
-		}  		
-	},
-  EmptyStatement(path)
-  {
-  	path.remove();
-  },  
-  "VariableDeclarator"(path)
-	{
-		let {node,scope,parentPath} = path;
-		let binding =  scope.getBinding(node.id.name);	
-		if (binding && !binding.referenced && binding.constant)
-		{//√ª”–±ª“˝”√£¨“≤√ª”–±ª∏ƒ±‰
-			path.remove();
-		}
-	},
-	
+    "IfStatement|ConditionalExpression" (path) {
+        let { consequent, alternate } = path.node;
+        let testPath = path.get('test');
+        const evaluateTest = testPath.evaluateTruthy();
+        if (evaluateTest === true) {
+            if (t.isBlockStatement(consequent)) {
+                consequent = consequent.body;
+            }
+            path.replaceWithMultiple(consequent);
+        } else if (evaluateTest === false) {
+            if (alternate != null) {
+                if (t.isBlockStatement(alternate)) {
+                    alternate = alternate.body;
+                }
+                path.replaceWithMultiple(alternate);
+            } else {
+                path.remove();
+            }
+        }
+    },
+    EmptyStatement(path) {
+        path.remove();
+    },
+        "VariableDeclarator" (path) {
+        let { node, scope, parentPath } = path;
+        let binding = scope.getBinding(node.id.name);
+        if (binding && !binding.referenced && binding.constant) { //Ê≤°ÊúâË¢´ÂºïÁî®Ôºå‰πüÊ≤°ÊúâË¢´ÊîπÂèò
+            path.remove();
+        }
+    },
+
 }
 
-global.types              = types;
-global.parser             = parser;
-global.traverse           = traverse;
-global.generator           = generator;
-global.isBaseLiteral      = isBaseLiteral;
-global.constantFold       = constantFold;
-global.keyToLiteral       = keyToLiteral;
-global.standardLoop       = standardLoop;
-global.removeDeadCode     = removeDeadCode;
-global.preDecodeObject    = preDecodeObject;
-global.simplifyLiteral    = simplifyLiteral;
-global.resolveSequence    = resolveSequence;
-global.isElementsLiteral  = isElementsLiteral;
-global.deleteRepeatDefine = deleteRepeatDefine;
-global.SimplifyIfStatement = SimplifyIfStatement;
-
+globalThis.isBaseLiteral = isBaseLiteral;
+globalThis.constantFold = constantFold;
+globalThis.keyToLiteral = keyToLiteral;
+globalThis.standardLoop = standardLoop;
+globalThis.removeDeadCode = removeDeadCode;
+globalThis.preDecodeObject = preDecodeObject;
+globalThis.simplifyLiteral = simplifyLiteral;
+globalThis.resolveSequence = resolveSequence;
+globalThis.isElementsLiteral = isElementsLiteral;
+globalThis.deleteRepeatDefine = deleteRepeatDefine;
+globalThis.SimplifyIfStatement = SimplifyIfStatement;
