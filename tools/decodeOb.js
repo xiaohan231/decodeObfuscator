@@ -257,6 +257,15 @@ const decodeObject = {
         savePropertiesToObject(properties, newMap);
         if (newMap.size != properties.length) return;
 
+        let config = globalThis.config.decodeObject;
+        config.debug && console.log(`start to decode object ${name} (start: ${id.start} line: ${id.loc.start.line})`);
+        if (references > config.references_limit) {
+            console.warn(`Object ${name} has ${references} referencePaths, ${config.enable_references_limit ? 'skip' : 'wait patiently'}`);
+            if (config.enable_references_limit) {
+                console.info("see tools/config.js if you do not want to skip")
+                return;
+            }
+        }
         replaceReferNode(newMap, referencePaths, scope);
 
         newMap.clear();

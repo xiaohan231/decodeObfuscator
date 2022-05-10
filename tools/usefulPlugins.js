@@ -294,6 +294,109 @@ const removeDeadCode = {
 
 }
 
+const FormatMember = {
+    MemberExpression(path) {
+        // _0x19882c['removeCookie']['toString']()
+        //  |
+        //  |
+        //  |
+        //  v
+        // _0x19882c.removeCookie.toString()
+        var curNode = path.node;
+        if (!t.isStringLiteral(curNode.property)) return;
+        if (curNode.computed === undefined || !curNode.computed === true) return;
+        if (!/^[a-zA-Z_$][0-9a-zA-Z_$]*$/.test(curNode.property.value)) return;
+        curNode.property = t.identifier(curNode.property.value);
+        curNode.computed = false;
+    }
+}
+
+//获取变量的值
+function getBindingValue(node, path) {
+     const { scope } = path;
+     let name = node.name, value;
+     
+    //字面量直接返回 "@@"
+    if (t.isStringLiteral(node)) {
+        value =  node.value;
+        name = value;
+        return debug(), value
+    }
+
+    //变量 a 
+    if (t.isIdentifier(node) && !path.scope.hasBinding(name)) {
+        console.warn(`cannot find binding of ${name} in path scope`)
+    }
+    if (t.isIdentifier(node) && scope.hasBinding(name)) {
+        console.log("===> find value of "+name)
+
+        let binding = path.scope.getBinding(name);
+        let { constant, constantViolations, kind } = binding;
+        let init =  binding.path.node.init, value_node;
+        if (constant) value_node = init;
+        if (!constant) {
+            //往上寻找定义的node
+            //计算偏移 大于零说明引用处前面有赋值的地方
+            let offset = (value_node) => node.start - value_node.start;
+            //先找重新赋值的constantViolations
+            if (offset(constantViolations[0].node) > 0) {
+                for ({ node } of constantViolations) {
+                    if (offset(node) < 0) break;
+                    value_node = node.right;
+                }
+            }
+            //对寻找结果进行判断
+           if (!value_node && offset(init) > 0) {
+               value_node = init;
+           }
+           if (value_node && offset(value_node) > offset(init) > 0) {
+                value_node = init;
+           }
+           if (!value_node && offset(init) < 0) {
+                console.warn(`cannot not find value node before`)
+           }
+        }
+
+        if (t.isStringLiteral(value_node) && value_node.value) {
+            value = value_node.value;
+            return debug(), value
+        } else {
+            return getBindingValue(value_node, path)
+        }
+    }
+
+    //object a.b
+    if(t.isMemberExpression(node)) {
+        let { property, object, computed } = node
+        let prop = property.name
+        if (!computed && t.isIdentifier(property)) {
+            let binding = scope.getBinding(object.name);
+            let node = binding.path.node;
+            if (t.isVariableDeclarator(node) &&
+               t.isObjectExpression(node.init)
+            ) {
+                let value_node = node.init.properties.find(property => property.key.value === prop).value
+                name = `${object.name}.${prop}`;
+                console.log(`===> find value of ${name}`);
+              if (t.isStringLiteral(value_node)) {
+                    value = value_node.value;
+                    return debug(), value
+                } else {
+                    return getBindingValue(value_node, path)
+                }
+            
+            } 
+        }
+    }
+
+    console.warn("not supported node type");
+    console.log(node);
+    function debug() {
+       console.log(name + " ==> " + value);
+    }
+
+}
+
 globalThis.isBaseLiteral = isBaseLiteral;
 globalThis.constantFold = constantFold;
 globalThis.keyToLiteral = keyToLiteral;
@@ -305,3 +408,5 @@ globalThis.resolveSequence = resolveSequence;
 globalThis.isElementsLiteral = isElementsLiteral;
 globalThis.deleteRepeatDefine = deleteRepeatDefine;
 globalThis.SimplifyIfStatement = SimplifyIfStatement;
+globalThis.FormatMember = FormatMember;
+globalThis.getBindingValue = getBindingValue;
