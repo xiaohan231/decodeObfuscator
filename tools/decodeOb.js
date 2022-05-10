@@ -248,7 +248,6 @@ const decodeObject = {
 
         let binding = scope.getBinding(name);
         let { constant, referencePaths , references} = binding;
-        if (!constant) return;
 
         let properties = init.properties;
         if (properties.length == 0) return;
@@ -262,7 +261,7 @@ const decodeObject = {
         if (references > config.references_limit) {
             console.warn(`Object ${name} has ${references} referencePaths, ${config.enable_references_limit ? 'skip' : 'wait patiently'}`);
             if (config.enable_references_limit) {
-                console.info("see tools/config.js if you do not want to skip")
+                console.warn("see tools/config.js if you do not want to skip");
                 return;
             }
         }
