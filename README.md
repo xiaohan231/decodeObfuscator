@@ -1,5 +1,12 @@
 ## decodeObfuscator
 
+## 安装最新依赖（可选）
+```js
+npm install
+pnpm install
+yarn install
+```
+
 ### 使用
 #### node
 ```js
