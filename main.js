@@ -1,14 +1,21 @@
 const fs = require('fs');
-const babel = require("./tools/babel_asttool");
-// globalThis.t = require("@babel/types")
-// globalThis.parser = require("@babel/parser")
-// globalThis.traverse = require("@babel/traverse").default
-// globalThis.generator = require("@babel/generator").default
-const usefulPlugins = require("./tools/usefulPlugins");
-const decodeOb = require("./tools/decodeOb");
-const config = require("./tools/config");
-const tool = require("./tools/decode");
-const consoleColor = require("./tools/consoleColor");
+//import tools
+require("./tools/usefulPlugins");
+require("./tools/decodeOb");
+require("./tools/config");
+require("./tools/decode");
+require("./tools/consoleColor");
+//import babel ast
+try {
+  globalThis.t = require("@babel/types");
+  globalThis.parser = require("@babel/parser");
+  globalThis.traverse = require("@babel/traverse").default;
+  globalThis.generator = require("@babel/generator").default;
+  console.info("use node module @babel/*");
+} catch {
+  require("./tools/babel_asttool");
+}
+
 
 if (process.argv.length > 2) {
     let encodeFile = process.argv[2], outPutFile = "decrypted.js", sourceCode = encodeFile;
@@ -23,7 +30,7 @@ if (process.argv.length > 2) {
     let  pluginNames = process.argv.slice(3),
     code = decode(sourceCode, pluginNames);
 
-    fs.writeFile(outPutFile, code, (err) => {});
+    fs.writeFile(outPutFile, code, () => {});
     console.info("解密文件: " + outPutFile)
 } else {
     console.log("Usage: node main.js <decrypted_js_path|decrypted_js_content> [<plugin_names>]")

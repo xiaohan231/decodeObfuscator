@@ -23,7 +23,7 @@ globalThis.cocomanhua = () =>{
                     let[key, tar] = arguments;
                     if (!t.isMemberExpression(tar.callee)) return;
                     let key_name = tar.callee.object.arguments[0].property.name;
-                    if(!keyNames.find(name=>name==key_name)) return;
+                    if(!keyNames.includes(key_name)) return;
                     let _set = map.get(key_name) || new Set();
                     console.info(path.toString());
                     console.log(`=== find aes key of ${key_name} ===`);
@@ -43,7 +43,7 @@ globalThis.cocomanhua = () =>{
             if (arguments.length === 2) {
                let[key, tar] = arguments;
                let code = generator(tar).code;
-               let key_name= keyNames.find(name=>code.includes(name));
+               let key_name= keyNames.find(name => code.includes(name));
                if (key_name) {
                     let _set = map.get(key_name) || new Set();
                     console.info(path.toString())
@@ -61,14 +61,14 @@ globalThis.cocomanhua = () =>{
     
     let visitors = Array.of(extratKeys, extratKeys2);
     
-    for (visitor of visitors) {
+    for (let visitor of visitors) {
         traverse(ast, visitor);
         if(Array.from(map.keys()).sort().toString() != keyNames.sort().toString()) {
             console.warn(`keys of keysMap not equal to [ ${keyNames} ], switch to another visitor`)
         } else { break }
     }
     
-    for ([key, value] of map) {
+    for (let [key, value] of map) {
         map.set(key, Array.from(value))
     }
     
@@ -77,7 +77,7 @@ globalThis.cocomanhua = () =>{
     if (typeof require == "function") {
         let keysFile = "./coco_keys.json";
         const fs = require('fs');
-        fs.writeFile(keysFile, keys, (err) => {});
+        fs.writeFile(keysFile, keys, () => {});
         console.info(`coco漫画密钥文件: ${keysFile}`);
     } else {
         globalThis.keys = keys;
