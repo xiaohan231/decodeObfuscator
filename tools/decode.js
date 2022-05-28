@@ -27,7 +27,12 @@ function loadDefault() {
 }
 
 function decode(sourceCode, pluginNames) {
-    globalThis.ast = parser.parse(sourceCode);
+    try {
+        globalThis.ast = parser.parse(sourceCode);
+    } catch (e) {
+        console.error(`fail to parse JavaScript to ast: ${sourceCode.slice(0,200)}`);
+        throw e.message
+    }
     console.time("处理完毕，耗时");
     //批量加载ast插件
     pluginNames.forEach(pluginName => load(pluginName))
