@@ -63,10 +63,10 @@ globalThis.common = () => {
     
     traverse(ast, simplifyLiteral);
     
-    console.info("deleteObfuscatorCode.......");
+   // console.info("deleteObfuscatorCode.......");
     
     //可能会误删一些代码，可屏蔽
-    traverse(ast, deleteObfuscatorCode);
+  //  traverse(ast, deleteObfuscatorCode);
     
     console.info("FormatMember...");
     
