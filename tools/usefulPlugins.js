@@ -314,25 +314,22 @@ const FormatMember = {
 //获取变量的值
 function getBindingValue(node, path) {
      const { scope } = path;
-     let name = node.name, value;
+     let name = generator(node).code, value, value_node;
      
     //字面量直接返回 "@@"
-    if (t.isStringLiteral(node)) {
+    if (t.isLiteral(node)) {
         value =  node.value;
         name = value;
         return debug(), value
     }
 
     //变量 a 
-    if (t.isIdentifier(node) && !path.scope.hasBinding(name)) {
-        console.warn(`cannot find binding of ${name} in path scope`)
-    }
     if (t.isIdentifier(node) && scope.hasBinding(name)) {
         console.log("===> find value of "+name)
 
         let binding = path.scope.getBinding(name);
         let { constant, constantViolations, kind } = binding;
-        let init =  binding.path.node.init, value_node;
+        let init =  binding.path.node.init;
         if (constant) value_node = init;
         if (!constant) {
             //往上寻找定义的node
@@ -357,7 +354,7 @@ function getBindingValue(node, path) {
            }
         }
 
-        if (t.isStringLiteral(value_node) && value_node.value) {
+        if (t.isLiteral(value_node) && value_node.value) {
             value = value_node.value;
             return debug(), value
         } else {
@@ -365,20 +362,38 @@ function getBindingValue(node, path) {
         }
     }
 
-    //object a.b
-    if(t.isMemberExpression(node)) {
+    //object a.b a.b.c
+    if (t.isMemberExpression(node)) {
         let { property, object, computed } = node
-        let prop = property.name
-        if (!computed && t.isIdentifier(property)) {
+        let property_keys = [property.name]
+        while (t.isMemberExpression(object)) {
+            //遍历a.b.cj.djdkd 并保存property到数组
+            property_keys.unshift(object.property.name)
+            object = object.object;
+        }
+        if (!computed && t.isIdentifier(property)
+            && scope.hasBinding(object.name)
+        ) {
             let binding = scope.getBinding(object.name);
-            let node = binding.path.node;
-            if (t.isVariableDeclarator(node) &&
-               t.isObjectExpression(node.init)
+            let object_node = binding.path.node;
+            if (t.isVariableDeclarator(object_node) &&
+               t.isObjectExpression(object_node.init)
             ) {
-                let value_node = node.init.properties.find(property => property.key.value === prop).value
-                name = `${object.name}.${prop}`;
-                console.log(`===> find value of ${name}`);
-              if (t.isStringLiteral(value_node)) {
+                console.log(`===> find value of ${generator(node).code}`);
+
+                let properties =  object_node.init.properties;
+
+                while (property_keys.length != 0) {
+                    //根据property_keys数组查找位置
+                    let keyValue = property_keys.shift();
+                    let property_node = properties.find(prop =>
+                       prop.key.name === keyValue ||
+                       prop.key.value === keyValue
+                    );
+                    if (property_node) value_node = property_node.value;
+                    if (t.isObjectExpression(value_node)) properties = value_node.properties;
+                }
+                if (t.isLiteral(value_node)) {
                     value = value_node.value;
                     return debug(), value
                 } else {
@@ -389,8 +404,8 @@ function getBindingValue(node, path) {
         }
     }
 
-    console.warn("not supported node type");
-    console.log(node);
+    //console.warn("not supported node type");
+    //console.log(node);
     function debug() {
        console.log(name + " ==> " + value);
     }
