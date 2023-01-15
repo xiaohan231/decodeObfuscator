@@ -1,4 +1,4 @@
-//ast通用插件使用示范
+//ob解混淆
 globalThis.common = () => {
     //字面量解混淆
     console.info("traverse Hex or Unicode String.......");

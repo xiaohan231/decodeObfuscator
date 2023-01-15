@@ -47,4 +47,5 @@ function decode(sourceCode, pluginNames) {
 
 
 globalThis.decode = decode;
+globalThis.load = load;
 
