@@ -332,6 +332,7 @@ function getBindingValue(node, path) {
         let init =  binding.path.node.init;
         if (constant) value_node = init;
         if (!constant) {
+            value = init.value;
             //往上寻找定义的node
             //计算偏移 大于零说明引用处前面有赋值的地方
             let offset = (value_node) => node.start - value_node.start;
@@ -340,7 +341,13 @@ function getBindingValue(node, path) {
                 for ({ node } of constantViolations) {
                     if (offset(node) < 0) break;
                     value_node = node.right;
+                    if (node.operator == "+=") value += getBindingValue(value_node, path)
+                    if (node.operator == "/=") value /= getBindingValue(value_node, path)
+                    if (node.operator == "*=") value *= getBindingValue(value_node, path)
+                    if (node.operator == "-=") value -= getBindingValue(value_node, path)
+                    if (node.operator == "=") value = getBindingValue(value_node, path)
                 }
+                return value
             }
             //对寻找结果进行判断
            if (!value_node && offset(init) > 0) {
@@ -354,7 +361,7 @@ function getBindingValue(node, path) {
            }
         }
 
-        if (t.isLiteral(value_node) && value_node.value) {
+        if (t.isLiteral(value_node)) {
             value = value_node.value;
             return debug(), value
         } else {
