@@ -1,5 +1,5 @@
 /**
- https://manwa2.site/static/js/ch.js?v=202208132
+ https://mwcomic7.co/static/js/ch.js?v=202306303
  漫蛙正文图片aes解密密钥解析
 */
 globalThis.manwa = () => {
