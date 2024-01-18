@@ -1,5 +1,5 @@
 function ImgKey(G) {
-  var H = '';
+  var H = "";
   if (G != "" && G != "0") {
     var I = "";
                     if (G == "518472") {
