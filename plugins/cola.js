@@ -12003,6 +12003,6 @@ function ImgKey(G) {
                       I = "Xc355iJ1OoUXs23I";
                     }
     H = I;
-    return H;
+    return H
   }
 }
