@@ -1,87 +1,56 @@
-//自动解析cocomanhuan加密密钥
-//必须先解密
-globalThis.cocomanhua = () => {
-  let map = new Map();
-  let keyNames = Array.of("C_DATA", "enc_code1", "enc_code2");
+/**
+ https://www.colamanga.com/js/manga.read.js
+ cola正文图片aes解密密钥解析
+*/
+globalThis.manwa = () => {
 
-  //window.devtools.jsd(key, ...(window.C_DATA))
-  const extratKeys = {
-    CallExpression(path) {
-      const { callee, arguments } = path.node;
-      if (t.isMemberExpression(callee) && arguments.length > 1000) {
-        let { object, property } = callee;
-        if (!t.isMemberExpression(object)) return
-        if ( //object.object.name === "window" &&
-        object.property.name === "devtools" && property.name === "jsd") {
+  //解ob混淆
+  load('common')
+  //evalPacker混淆
+  load('evalPacker')
 
-          let[key, tar] = arguments;
-          if (!t.isMemberExpression(tar.callee)) return;
-          let key_name = tar.callee.object.arguments[0].property.name;
-          if (!keyNames.includes(key_name)) return;
-          let _set = map.get(key_name) || new Set();
-          console.info(path.toString());
-          console.log(`=== find aes key of ${key_name} ===`);
-          let decodeKey = getBindingValue(key, path);
-          if (!!decodeKey) {
-            _set.add(decodeKey);
-            map.set(key_name, _set)
-          }
+  let wrappedAesFunctionName = null
+  let set = new Set()
 
-        }
+  // find function with CryptoJS
+  const findWrappedAesFunction = {
+    FunctionDeclaration(path) {
+      const code = generator(path.node).code
+      if (/CryptoJS/.test(code)) {
+        wrappedAesFunctionName = path.node.id.name;
+        console.info("解密函数", generator(path.node).code)
       }
     }
   }
 
-  // ....(我是密钥, ...C_DATA...)
-  const extratKeys2 = {
+  const findAesKey = {
     CallExpression(path) {
-      const { arguments } = path.node;
-      if (arguments.length > 1000) {
-        let[key, tar] = arguments;
-        let code = generator(tar).code;
-        let key_name = keyNames.find(name => code.includes(name));
-        if (key_name) {
-          let _set = map.get(key_name) || new Set();
-          console.info(path.toString())
-          let decodeKey = getBindingValue(key, path);
-          if (!!decodeKey) {
-            _set.add(decodeKey);
-            map.set(key_name, _set)
-          }
-        }
-
+      const { callee, arguments } = path.node
+      if (callee.name === wrappedAesFunctionName &&
+        arguments.length >= 2
+      ) {
+        //解密函数(目标，密钥， 其他）
+        console.info("调用", generator(path.node).code)
+        let key = arguments[1]
+        set.add(getBindingValue(key, path))
       }
     }
   }
 
+  traverse(ast, findWrappedAesFunction);
+  traverse(ast, findAesKey);
 
-  console.info('extra cocomanahua keys...\n');
-
-  let visitors = Array.of(extratKeys, extratKeys2);
-
-  for (let visitor of visitors) {
-    traverse(ast, visitor);
-    if (Array.from(map.keys()).sort().toString() != keyNames.sort().toString()) {
-      console.warn(`keys of keysMap not equal to[${keyNames}], switch to another visitor`)
-    } else {
-      break
-    }
-  }
-
-  for (let[key, value] of map) {
-    map.set(key, Array.from(value))
-  }
-
-  let keys = JSON.stringify(Object.fromEntries(map));
+  let keys = JSON.stringify(Array.from(set));
 
   if (typeof require == "function") {
-    let keysFile = "./coco_keys.json";
+    let keysFile = "./manwa_keys.json";
     const fs = require('fs');
     fs.writeFile(keysFile, keys, () => {});
-    console.info(`coco漫画密钥文件: ${keysFile}`);
+    console.info(`manwa漫画密钥文件: ${keysFile}`);
   } else {
     globalThis.keys = keys;
     console.info("密钥保存到keys变量")
   }
   console.log(keys);
+
 }
