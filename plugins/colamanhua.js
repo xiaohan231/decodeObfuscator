@@ -43,10 +43,10 @@ globalThis.manwa = () => {
   let keys = JSON.stringify(Array.from(set));
 
   if (typeof require == "function") {
-    let keysFile = "./manwa_keys.json";
+    let keysFile = ".//cola_keys.json";
     const fs = require('fs');
     fs.writeFile(keysFile, keys, () => {});
-    console.info(`manwa漫画密钥文件: ${keysFile}`);
+    console.info(`cola漫画密钥文件: ${keysFile}`);
   } else {
     globalThis.keys = keys;
     console.info("密钥保存到keys变量")
