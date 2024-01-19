@@ -1,4 +1,4 @@
-globalThis.manwa = () => {
+globalThis.cocomanhua = () => {
   //解ob混淆
   load('common')
   //evalPacker混淆
