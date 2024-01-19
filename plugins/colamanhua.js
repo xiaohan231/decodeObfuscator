@@ -1,36 +1,48 @@
-globalThis.cocomanhua = () => {
-  //解ob混淆
-  load('common')
-  //evalPacker混淆
-  load('evalPacker')
+/**
+ https://www.colamanga.com/js/manga.read.js
+ cola正文图片aes解密密钥解析
+*/
+globalThis.colamanhua = () => {
 
-  let extractedCode = '';
-  const extractCodeVisitor = {
-    VariableDeclaration(path) {
-      const { declarations } = path.node;
-      if (declarations.length === 1 && declarations[0].id.name === 'I' && declarations[0].init.type === 'StringLiteral') {
-        extractedCode += generator(path.node).code;
-      }
-    },
-    ExpressionStatement(path) {
-      const { expression } = path.node;
-      if (expression.type === 'AssignmentExpression' && expression.left.object?.name === 'window' &&
-          expression.left.property?.name === 'CryptoJS' && expression.right.callee?.property?.name === 'Utf8' &&
-          expression.right.arguments?.length === 1 && expression.right.arguments[0].name === 'I') {
-        extractedCode += generator(expression).code;
-        this.stop(); // 停止继续遍历
+  //解ob混淆
+  load('common');
+  //evalPacker混淆
+  load('evalPacker');
+
+  // 提取解混淆的代码片段并添加到ImgKey函数中
+  const extractCode = {
+    IfStatement(path) {
+      const { test, consequent } = path.node;
+      if (
+        test.type === 'BinaryExpression' &&
+        test.operator === '==' &&
+        test.left.name === 'G' &&
+        consequent.length === 1 &&
+        consequent[0].type === 'ExpressionStatement' &&
+        consequent[0].expression.type === 'AssignmentExpression' &&
+        consequent[0].expression.operator === '=' &&
+        consequent[0].expression.left.name === 'I'
+      ) {
+        const value = consequent[0].expression.right.value;
+        const extractedCode = `if (G === "${test.right.value}") { I = "${value}"; }`;
+        path.replaceWithSourceString(extractedCode);
       }
     }
-  };
+  }
 
-  traverse(ast, extractCodeVisitor);
+  traverse(ast, extractCode);
 
-  if (extractedCode !== '') {
+  let keys = generator(ast).code;
+
+  if (typeof require == "function") {
     let keysFile = "./cola_keys.js";
     const fs = require('fs');
-    fs.writeFile(keysFile, extractedCode, () => {});
+    fs.writeFile(keysFile, keys, () => {});
     console.info(`cola漫画密钥文件: ${keysFile}`);
   } else {
-    console.warn("无法找到要提取的代码");
+    globalThis.keys = keys;
+    console.info("密钥保存到keys变量")
   }
-};
+  console.log(keys);
+
+}
