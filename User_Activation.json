@@ -14,6 +14,17 @@
   ],
   "link":[
       "https://qyyuapi.com",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/hx/V1.3.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/hx/V1.4.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/hx/V1.5.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/hx/V1.6.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/hx/V1.7.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/hx/V1.8.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/hx/V1.9.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/hx/V2.0.json"
+  ],
+  "link1":[
+      "https://qyyuapi.com",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/json/V1.3.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/json/V1.4.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/json/V1.5.json",
@@ -24,7 +35,10 @@
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/json/V2.0.json"
   ],
   "intro":[
-      "\n书源发布页：https://qyyuapi.com\n①激活码在书源发布页获取\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、修复G站漫画目录逆序和封面加载错误\n2、新增漫画源：古风漫画、动漫之家、ZERO搬运网\n3、ZERO搬运网源站网址已更新，在登录里面点击更新源站\n导入链接:https://qyyuapi.com/json/0604.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-06-04"
+      "\n书源发布页：https://qyyuapi.com\n①激活码在书源发布页获取\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、修复G站漫画目录逆序和封面加载错误\n2、新增漫画源：古风漫画、动漫之家、ZERO搬运网\n3、ZERO搬运网源站网址已更新，在登录里面点击更新源站\n导入链接:https://qyyuapi.com/hx/0604.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-06-04"
+  ],
+  "intro1":[
+      "\n书源发布页：https://qyyuapi.com\n①激活码在书源发布页获取\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、修复G站漫画目录逆序和封面加载错误\n2、新增漫画源：古风漫画、动漫之家、ZERO搬运网\n3、ZERO搬运网源站网址已更新，在登录里面点击更新源站\n导入链接:https://qyyuapi.com/hx/0604.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-06-04"
   ],
   "2tF6O5VbMzHs0zBzhKDDxQ==": true,
   "Tq1HRqTuWeRCT7Z5N9+i4Q==": true
