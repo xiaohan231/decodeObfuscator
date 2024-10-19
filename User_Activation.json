@@ -13,7 +13,8 @@
       "V2.0〔2024-05-24〕",
       "V2.1〔2024-06-09〕",
       "V2.2〔2024-07-02〕",
-      "V2.3〔2024-08-29〕"
+      "V2.3〔2024-08-29〕",
+      "V2.4〔2024-10-19〕"
   ],
   "link":[
       "https://qyyuapi.com",
@@ -27,7 +28,8 @@
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.0.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.1.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.2.json",
-      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.3.json"
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.3.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.4.json"
   ],
   "link1":[
       "https://qyyuapi.com",
@@ -41,13 +43,14 @@
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.0.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.1.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.2.json",
-      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.3.json"
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.3.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.4.json"
   ],
   "intro":[
-      "\n书源发布页：https://qyyuapi.com\n①激活码在书源发布页获取\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、优化书源激活接口切换；\n2、优化评论加载页数输入；\n3、ARCHIVE自动切换音频类型；\n4、修复komiic漫画；\n5、修复古风漫画发现；\n6、修复ZERO搬运网源站更新；\n7、修复包子漫画繁体源站正文翻页；\n8、修复哔哩哔哩漫画BiliPlus解析接口；\n9、最次元添加源站：https://www.yydsmh.com；\n10、其他优化；\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-08-29\nㅤ\n1、新增如漫画；\n导入链接：https://qyyuapi.com/sy/hx/ru.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-08-31\nㅤ\n1、新增再漫画；\n导入链接：https://qyyuapi.com/sy/hx/zmh.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-09-14\nㅤ\n1、修复嗨皮漫画正文；\n导入链接：https://qyyuapi.com/sy/hx/hp.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-06\nㅤ\n1、修复cola漫画，删除请求头压缩算法；\n导入链接：https://qyyuapi.com/sy/hx/cola.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-11\nㅤ\n1、拷贝漫画删除失效源站，增加账号登录和加入移出书架功能；\n导入链接：https://qyyuapi.com/sy/hx/copy.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-13\nㅤ\n1、修复ZERO搬运网账号登录；\n导入链接：https://qyyuapi.com/sy/hx/zero.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-16\nㅤ\n1、修复G站漫画源站更新；\n导入链接：https://qyyuapi.com/sy/hx/goda.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-19"
+      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、移除源登录页激活码输入，统一改为XH发布页订阅源激活；\n2、优化Map(e)函数；\n3、修复bilibili漫画详情加载错误，优化BiliPlus解析切换登录；\n4、新增漫画源：如漫画、再漫画；\n5、修复cola漫画服务器密钥自动更新；\n6、最次元添加源站：https://m.mhkami.com；\n7、最次元部分源站使用TLS1.3协议，需要开启Cronet才能访问；\n8、修复嗨皮漫画正文；\n9、修复cola漫画，删除请求头压缩算法；\n10、拷贝漫画删除失效源站，增加账号登录和加入移出书架功能；\n11、修复ZERO搬运网账号登录；\n12、修复G站漫画源站更新；\n13、其他优化；\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-19"
   ],
   "intro1":[
-      "\n书源发布页：https://qyyuapi.com\n①激活码在书源发布页获取\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、优化书源激活接口切换；\n2、优化评论加载页数输入；\n3、ARCHIVE自动切换音频类型；\n4、修复komiic漫画；\n5、修复古风漫画发现；\n6、修复ZERO搬运网源站更新；\n7、修复包子漫画繁体源站正文翻页；\n8、修复哔哩哔哩漫画BiliPlus解析接口；\n9、最次元添加源站：https://www.yydsmh.com；\n10、新增一耽漫画；\n11、新增香香腐宅漫画；\n12、重写爱看漫画发现；\n13、修复禁漫天堂和漫蛙账号登录；\n14、修复木马漫画详情封面和正文，优化发现；\n15、其他优化；\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-08-29\nㅤ\n1、新增如漫画；\n导入链接：https://qyyuapi.com/sy/hx/ru.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-08-31\nㅤ\n1、修复漫蛙正文获取；\n导入链接：https://qyyuapi.com/sy/yc/mw.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-09-09\nㅤ\n1、修复梦游漫画正文获取；\n导入链接：https://qyyuapi.com/sy/yc/my.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-09-13\nㅤ\n1、新增再漫画；\n导入链接：https://qyyuapi.com/sy/hx/zmh.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-09-14\nㅤ\n1、修复漫蛙正文获取；\n导入链接：https://qyyuapi.com/sy/yc/mw.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-09-15\nㅤ\n1、修复嗨皮漫画正文；\n导入链接：https://qyyuapi.com/sy/hx/hp.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-06\nㅤ\n1、修复cola漫画，删除请求头压缩算法；\n导入链接：https://qyyuapi.com/sy/hx/cola.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-11\nㅤ\n1、拷贝漫画删除失效源站，增加账号登录和加入移出书架功能；\n导入链接：https://qyyuapi.com/sy/hx/copy.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-13\nㅤ\n1、修复ZERO搬运网账号登录；\n导入链接：https://qyyuapi.com/sy/hx/zero.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-16\nㅤ\n1、修复G站漫画源站更新；\n导入链接：https://qyyuapi.com/sy/hx/goda.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-19\nㅤ\n1、修复漫蛙正文获取；\n导入链接：https://qyyuapi.com/sy/yc/mw.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-19"
+      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、移除源登录页激活码输入，统一改为XH发布页订阅源激活；\n2、优化Map(e)函数；\n3、修复bilibili漫画详情加载错误，优化BiliPlus解析切换登录；\n4、新增漫画源：如漫画、再漫画；\n5、修复cola漫画服务器密钥自动更新；\n6、最次元添加源站：https://m.mhkami.com；\n7、最次元部分源站使用TLS1.3协议，需要开启Cronet才能访问；\n8、修复嗨皮漫画正文；\n9、修复cola漫画，删除请求头压缩算法；\n10、拷贝漫画删除失效源站，增加账号登录和加入移出书架功能；\n11、修复ZERO搬运网账号登录；\n12、修复G站漫画源站更新；\n13、修复禁漫天堂刷新发现自动登录,优化登录函数；；\n14、修复漫蛙正文获取；\n15、其他优化；\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2024-10-19"
   ],
   "2tF6O5VbMzHs0zBzhKDDxQ==": true,
   "Tq1HRqTuWeRCT7Z5N9+i4Q==": true
