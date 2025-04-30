@@ -19,7 +19,8 @@
       "V2.3〔2024-08-29〕",
       "V2.4〔2024-10-19〕",
       "V2.5〔2024-12-16〕",
-      "V2.6〔2025-03-28〕"
+      "V2.6〔2025-03-28〕",
+      "V2.7〔2025-04-30〕"
   ],
   "link":[
       "https://qyyuapi.com",
@@ -36,7 +37,8 @@
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.3.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.4.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.5.json",
-      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.6.json"
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.6.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.7.json"
   ],
   "link1":[
       "https://qyyuapi.com",
@@ -53,13 +55,14 @@
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.3.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.4.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.5.json",
-      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.6.json"
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.6.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.7.json"
   ],
   "intro":[
-      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、增加登录页按钮自适应宽度(需安装阅读测试版：3.24.122618或以上版本)；\n2、优化部分书源添加和移出账号收藏，增加添加账号书架标识；\n3、优化部分书源账号书架记录同步；\n4、优化验证激活；\n5、优化详情分类；\n6、新增漫画源：新新漫画、漫画柜、MYCOMIC；\n7、修复嗨皮漫画详情评分；\n8、优化拷贝漫画、热辣漫画书架和浏览历史加载；\n9、修复Komiic漫画发现，目录改为书籍变量切换章节或分卷；\n10、修复动漫之家签到；\n11、修复再漫画账号订阅；\n12、更新最次元漫画开心源站网址；\n13、优化cola漫画正文解密；\n14、修复哔哩哔哩漫画，重写发现，修复评论上传接口，评论评分改为登录页填写(由于新增取向、类型参数，导入更新需要点击恢复默认后才能获取发现)；\n15、哔哩哔哩漫画登录跳转改为java.openUrl函数(需安装阅读测试版：3.25.021119或以上版本)；\n16、修复ZERO搬运网登录；\n17、修复嗨皮漫画正文获取错误；\n18、优化古风漫画正文；\n19、其他优化；\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-03-28"
+      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、部分源代码改为远程获取；\n2、jsLib代码适配新版阅读；\n3、修复如漫画源站链接；\n4、新增漫画源：读漫屋；\n5、修复部分漫画源人机验证；\n6、修复嗨皮漫画部分章节访问错误，优化目录加载；\n7、优化拷贝漫画、热辣漫画目录加载；\n8、其他优化；\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-04-30"
   ],
   "intro1":[
-      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、增加登录页按钮自适应宽度(需安装阅读测试版：3.24.122618或以上版本)；\n2、优化部分书源添加和移出账号收藏，增加添加账号书架标识；\n3、优化部分书源账号书架记录同步；\n4、优化验证激活；\n5、优化详情分类；\n6、新增漫画源：新新漫画、漫画柜、MYCOMIC；\n7、修复嗨皮漫画详情评分；\n8、优化拷贝漫画、热辣漫画书架和浏览历史加载；\n9、修复Komiic漫画发现，目录改为书籍变量切换章节或分卷；\n10、修复动漫之家签到；\n11、修复再漫画账号订阅；\n12、更新最次元漫画开心源站网址；\n13、优化cola漫画正文解密；\n14、修复哔哩哔哩漫画，重写发现，修复评论上传接口，评论评分改为登录页填写(由于新增取向、类型参数，导入更新需要点击恢复默认后才能获取发现)；\n15、哔哩哔哩漫画登录跳转改为java.openUrl函数(需安装阅读测试版：3.25.021119或以上版本)；\n16、修复ZERO搬运网登录；\n17、修复嗨皮漫画正文获取错误；\n18、优化古风漫画正文；\n19、新增漫画源：肉漫屋；\n20、修复禁漫天堂源站更新，修复优化详情、正文和线路切换；\n21、优化漫蛙签到、正文解密和线路切换，修复登录后刷新发现错误；\n22、优化第一韩漫正文翻页；\n23、优化香香腐宅账号登录；\n24、修复优化开心看漫画发现、详情和正文；\n25、优化重构哔咔漫画；\n26、其他优化；\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-03-28\nㅤ\n1、部分源代码改为远程获取；\n2、禁漫天堂改为APP接口(更新后要在登录页恢复默认，书架漫画要重新添加)；\n导入链接：https://qyyuapi.com/sy/yc/jm.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-04-09\nㅤ\n1、修复巴卡漫画源站更新；\n导入链接：https://qyyuapi.com/sy/yc/baka.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-04-14\nㅤ\n1、修复漫蛙更新前JS；\n导入链接：https://qyyuapi.com/sy/yc/mw.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-04-15"
+      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、部分源代码改为远程获取；\n2、jsLib代码适配新版阅读；\n3、修复如漫画源站链接；\n4、新增漫画源：读漫屋；\n5、修复部分漫画源人机验证；\n6、修复嗨皮漫画部分章节访问错误，优化目录加载；\n7、优化拷贝漫画、热辣漫画目录加载；\n8、禁漫天堂改为APP接口(更新后要在登录页恢复默认，书架漫画要重新添加)；\n9、禁漫天堂发现切换增加全部显示，新增签到功能；\n10、修复巴卡漫画源站更新；\n11、修复漫蛙更新前JS；\n12、修复鸟鸟韩漫源站更新；\n13、其他优化；\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-04-30"
   ],
   "tips":[
       "\n❌激活验证错误❌\n请在XH发布页订阅源激活\n🔶书源提示🔶\n各位阅读书友，很遗憾通知各位，由于微信公众号“开源阅读订阅”打着分享的旗号，盗用大佬们免费分享的书源引流圈钱，在这里郑重提示，开源阅读是免费软件，并没有内置广告，书源也是大佬们免费分享，也并没有授权公众号“开源阅读订阅”搬运。",
@@ -140,7 +143,7 @@
       "9e136a81aa52995a62820e73428aa438_v26_1",
       "340bc2884a6ae7a226bbc62c8a0e207f_v27_0",
       "7b05687a0e3b1cecf2f1bdafa863dfc4_v27_1",
-      "5f17a000271e213cf2a28d93887939fe_v27_1"
+      "abf85c1f07a2981caf39f0c7a4231dda_v27_1"
   ],
   "包子漫画":[
       "211a6ddc70264862bf925234fc9af964_v26_0",
@@ -342,7 +345,7 @@
       "64f29e18cf1956a1e0a5722ce20da964_v13q_1",
       "e101d75a4fb06fd005b45d4b43f0f99a_v14q_0",
       "952c57c0839aa89ac055d82fcb7ff0f9_v14q_1",
-      "753916388ba2f47e2307007e11c76ea1_v14q_1"
+      "a0018345c7481ecc147281a881693506_v14q_1"
   ],
   "UAA禁漫":[
       "d21af1fbfb122f47e880a035a11b9dee_v13q_0",
