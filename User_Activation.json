@@ -86,15 +86,9 @@
       "\n❌激活码错误❌"
   ],
   "limits":[
-      "https://ycoo.net",
-      "https://ysqbbs.com",
-      "https://srcbbs.com",
-      "https://ycoo-tool.com"
+      "https://ycoo.net"
   ],
   "limit_keys":[
-      "YPSa_2132_",
-      "YPSa_2132_",
-      "YPSa_2132_",
       "YPSa_2132_"
   ],
   "limit_tips":[
