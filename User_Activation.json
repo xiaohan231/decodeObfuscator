@@ -3,6 +3,7 @@
   "version": 1.4,
   "T": 1728000000,
   "T1": 1728000000,
+  "T2": 3600000,
   "lock": "",
   "title":[
       "书源使用教程",
@@ -21,7 +22,8 @@
       "V2.5〔2024-12-16〕",
       "V2.6〔2025-03-28〕",
       "V2.7〔2025-05-01〕",
-      "V2.8〔2025-07-26〕"
+      "V2.8〔2025-07-26〕",
+      "V2.9〔2025-10-08〕"
   ],
   "link":[
       "https://qyyuapi.com",
@@ -40,7 +42,8 @@
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.5.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.6.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.7.json",
-      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.8.json"
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.8.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/hx/V2.9.json"
   ],
   "link1":[
       "https://qyyuapi.com",
@@ -59,13 +62,14 @@
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.5.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.6.json",
       "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.7.json",
-      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.8.json"
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.8.json",
+      "https://www.coolapk.com/link?url=legado://import/bookSource?src=https://qyyuapi.com/sy/yc/V2.9.json"
   ],
   "intro":[
-      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、拷贝漫画增加源站；\n2、热辣漫画增加源站；\n3、热辣漫画评论接口改为调用拷贝直连源站；\n4、优化漫画柜详情和目录规则；\n5、修复cola漫画正文图片解密；\n6、其他优化；\n导入链接：https://qyyuapi.com/sy/hx/0726.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-07-26\nㅤ\n更新：\nㅤ\n1、修复拷贝漫画(目前仅4号网页接口可用，旧版升级需清理webview和缓存，并重新获取远程代码)；\n导入链接：https://qyyuapi.com/sy/hx/0816.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-08-16\nㅤ\n1、修复拷贝漫画，增加榜单取向切换(旧版升级需清理webview和缓存，并重新获取远程代码)；\n导入链接：https://qyyuapi.com/sy/hx/0819.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-08-19\nㅤ\n1、重写如漫画、读漫屋；\n导入链接：https://qyyuapi.com/sy/hx/1007.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-10-07"
+      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、优化验证代码，加快验证速度；\n2、修复拷贝漫画，增加榜单取向切换；\n3、重写如漫画、读漫屋；\n4、其他优化；\n导入链接：https://qyyuapi.com/sy/hx/V2.9.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-10-08"
   ],
   "intro1":[
-      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、拷贝漫画增加源站；\n2、热辣漫画增加源站；\n3、热辣漫画评论接口改为调用拷贝直连源站；\n4、优化漫画柜详情和目录规则；\n5、修复cola漫画正文图片解密；\n6、修复香香腐宅目录链接；\n7、优化哔咔漫画正文图片质量切换，增加原图画质(需要代理)，列表和详情增加显示图片数量；\n8、修复开心看漫画详情作者信息；\n9、禁漫天堂增加源站，增加搜索禁漫车；\n10、修复巴卡漫画；\n11、其他优化；\n导入链接：https://qyyuapi.com/sy/yc/0726.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-07-26\nㅤ\n更新：\nㅤ\n1、修复拷贝漫画(目前仅4号网页接口可用，旧版升级需清理webview和缓存，并重新获取远程代码)；\n导入链接：https://qyyuapi.com/sy/hx/0816.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-08-16\nㅤ\n1、修复拷贝漫画，增加榜单取向切换(旧版升级需清理webview和缓存，并重新获取远程代码)；\n导入链接：https://qyyuapi.com/sy/hx/0819.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-08-19\nㅤ\n1、修复巴卡漫画人机验证；\n导入链接：https://qyyuapi.com/sy/hx/0920.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-09-20\nㅤ\n1、重写如漫画、读漫屋；\n导入链接：https://qyyuapi.com/sy/hx/1007.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-10-07"
+      "\n书源发布页：https://qyyuapi.com\n①书源需要导入XH发布页订阅源激活\n②点击阅读，可查看书源使用教程和所有书源版本\n③低调使用，注意身体，远离DD\nㅤ\n通知：\nㅤ\n1、优化验证代码，加快验证速度；\n2、修复拷贝漫画，增加榜单取向切换；\n3、重写如漫画、读漫屋；\n4、优化漫蛙源站更新；\n5、修复漫蛙详情评论加载错误；\n6、修复巴卡漫画目录，增加人机验证；\n7、修复肉漫屋源站更新和正文图片缺失；\n8、修复哔咔漫画封面；\n9、其他优化；\n导入链接：https://qyyuapi.com/sy/yc/V2.9.json\nㅤ\nㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ日期：2025-10-08"
   ],
   "tips":[
       "\n❌激活验证错误❌\n请在XH发布页订阅源激活",
@@ -107,8 +111,8 @@
       "ec0a01fbdf890019bb08484d9ff294db_v17d_0",
       "9e59ca72bb7339c66ecafd531484e66b_v18d_0",
       "9a8942fd44e77149113e387695d1b9c7_v18d_1",
-      "6cbfca9d0aa276382b8cd7db298f37ad_v18d_0",
-      "5f2f3303c1deb9dba86daa1a7cef033b_v18d_1"
+      "31b923c1e462b67ca31a10f6bd703f10_v18d_0",
+      "6aaf72d676197984aec7095b81084a5d_v18d_1"
   ],
   "ARCHIVE":[
       "c1302d30dc1aab23760436ba79a7c209_v26_0",
@@ -116,7 +120,9 @@
       "12660666bb438291761edc489d237971_v27_0",
       "8f7414d8d11cc24310d7e7ffec502968_v27_1",
       "6c51caf2a7944d0e73491ef429a7c2ab_v28_0",
-      "c74bad6f84d095db43225a2581279ecf_v28_1"
+      "c74bad6f84d095db43225a2581279ecf_v28_1",
+      "6ced1c8974703321df429e41847f5a3a_v29_0",
+      "10251cf78388ea7c39e0beda396b0b6b_v29_1"
   ],
   "哔哩哔哩漫画":[
       "2454ca1d10a0afb9c25ec58a961b8744_v26_0",
@@ -124,7 +130,9 @@
       "a955f8ddb0727903610286048fc667ab_v27_0",
       "af361b64345aeb773c526bb96ad9d52c_v27_1",
       "cd8f3e520e870347e55ad3c8e7b29aa8_v28_0",
-      "77d7da9c5fcd0486f8326082a970a0fb_v28_1"
+      "77d7da9c5fcd0486f8326082a970a0fb_v28_1",
+      "ec68c217492b308d23c35d0cd8a53af4_v29_0",
+      "9ddd60df714642a16df42ccc7459aac4_v29_1"
   ],
   "再漫画":[
       "ce2bc931c5876207c71a7f985cca97d5_v26_0",
@@ -132,7 +140,9 @@
       "1819434e9c1a0a910a16c83586e1a9ce_v27_0",
       "7c26ede7f0b2f42938e2e25811beff92_v27_1",
       "1d4085b6f10d051b17b2705837b9d76f_v28_0",
-      "2be995203e402d59ae9177a0de939800_v28_1"
+      "2be995203e402d59ae9177a0de939800_v28_1",
+      "6f992160e1a6a88a0a14d7aa50b4fb4f_v29_0",
+      "e7a6b8fcea7533746a615ceb35b927a5_v29_1"
   ],
   "COLA漫画":[
       "3536ee6840fc1515885950b978ba8590_v26_0",
@@ -140,7 +150,9 @@
       "1cf488204f57a299496d6135dd576c3c_v27_0",
       "762383f3ed5d8d18cbc34f5fa89ef87b_v27_1",
       "8a87dbe4a52a108e2aaad0eeaf75bb92_v28_0",
-      "58531c6e25a6717858bee123d21dddcc_v28_1"
+      "58531c6e25a6717858bee123d21dddcc_v28_1",
+      "eb731259668b3d933b556cf49bc5cfc3_v29_0",
+      "2dd986521e9fccc0a2cbb75ec37780dd_v29_1"
   ],
   "拷贝漫画":[
       "711d5ed79f155a2fc67e33a4e80ebb0e_v26_0",
@@ -152,7 +164,9 @@
       "ffe9bd95817f88067d00455558a9dc3f_v28_0",
       "c52d97513945d325a8b64175ff594911_v28_1",
       "6f8b6b4bac8e25ce2cd5cbc99a6f0ef1_v29_0",
-      "28873266490f31f41ddbf17f5d3c2f0e_v29_1"
+      "28873266490f31f41ddbf17f5d3c2f0e_v29_1",
+      "b62625704334f17de35f6ba5610e8eb3_v29_0",
+      "0d23b82c18cee1339d432c0391d99235_v29_1"
   ],
   "热辣漫画":[
       "efa92fb1b5857bf27a49ef0450e438c4_v26_0",
@@ -162,7 +176,9 @@
       "fd779d272edc030e4f34244627e6a11d_v28_0",
       "f2ff3ac0bde47ca22bea10dbbdbdec26_v28_1",
       "240224ad868321ac7969f7e51d81e8a6_v28_0",
-      "0736f491f7fd087f883d6b18d1c2142e_v28_1"
+      "0736f491f7fd087f883d6b18d1c2142e_v28_1",
+      "1f47292349f29712dca202c1c4713909_v29_0",
+      "01224f6014e7e90c0bc5bfe557551700_v29_1"
   ],
   "漫画柜":[
       "e875a7d5647c8a014ed62928541a795b_v26_0",
@@ -170,7 +186,9 @@
       "9ac7f62699e8b60b9d703fb4cbf22f5e_v27_0",
       "82e6cd4f45177a8e5cca1d0de7748c5e_v27_1",
       "220697f4c2d8b8f6eba8ef33c8e6689d_v28_0",
-      "2653ca4b0702bf5a8b939489eb3074e4_v28_1"
+      "2653ca4b0702bf5a8b939489eb3074e4_v28_1",
+      "d47936e39195d14b220ec9b75c5acd6c_v29_0",
+      "2435c129f7635a9c8bbe848ef9dbdec0_v29_1"
   ],
   "Komiic漫画":[
       "8f1e6777d0e2d51dc4e530c0b08c809d_v26_0",
@@ -178,7 +196,9 @@
       "878bc2af565f4abc717091b50af88cb4_v27_0",
       "84ac89569813932c6acc8485325695b5_v27_1",
       "43f32faf38a3ec5d26119dea4792cbf1_v28_0",
-      "926a89adf0241c3081fa49b3094314e3_v28_1"
+      "926a89adf0241c3081fa49b3094314e3_v28_1",
+      "ee6d92faff6b18016d519e0cf9058b98_v29_0",
+      "dedf988cab000426595e46a1d935fca7_v29_1"
   ],
   "MYCOMIC":[
       "7b79bf668482d9baaf0252d78b03465e_v26_0",
@@ -186,7 +206,9 @@
       "a7c86386ff3224d7602f47b95119c693_v27_0",
       "3d35c51ba995d37ad7f4ad900d5156e9_v27_1",
       "604cf3cd6891b4c4bf4f93ec43f599b3_v28_0",
-      "54f5e467a9badf328e2477e5eb0e2730_v28_1"
+      "54f5e467a9badf328e2477e5eb0e2730_v28_1",
+      "30cd3433b5e7065877516f8252190fd9_v29_0",
+      "8c2860f1b7937dcc20a5ec3d00675777_v29_1"
   ],
   "ZERO搬运网":[
       "f561e9c7c69cf4163da91f6edcca9e0c_v26_0",
@@ -196,7 +218,10 @@
       "abf85c1f07a2981caf39f0c7a4231dda_v27_1",
       "c6d5105b2873b27767bf61eace634b8c_v28_0",
       "b40fd2815e57d6413fa48917088240d7_v28_1",
-      "8580e7553090fe0fdf4b4ca8ebad5f64_v28_1"
+      "8580e7553090fe0fdf4b4ca8ebad5f64_v28_1",
+      "28ca3618673c62ce0197496660357178_v29_0",
+      "4f6ca7476982728d40c3d4135ab78a70_v29_1",
+      "27690099f97dc0c43eca34d5f9136159_v29_1"
   ],
   "包子漫画":[
       "211a6ddc70264862bf925234fc9af964_v26_0",
@@ -204,7 +229,9 @@
       "78c8eca6e7191d0b55803a126fa09b54_v27_0",
       "fc709f6161ac127394e7ac907d63a8e0_v27_1",
       "efa0b15f1c89d61f7829092d955c9527_v28_0",
-      "2ed11c741a865ada2633e15a6592f2f4_v28_1"
+      "2ed11c741a865ada2633e15a6592f2f4_v28_1",
+      "8d7f40eaa749f5afbd59278255c080e2_v29_0",
+      "89260a32606c45434338ed583e00398d_v29_1"
   ],
   "看漫画":[
       "a961d4d626fe2155a2a0545eafcd1cf4_v26_0",
@@ -212,7 +239,9 @@
       "af1caf964d76d9940c990c074b26b9a8_v27_0",
       "a5ee6a7e48a00f23f5ae9635795f65fc_v27_1",
       "bd07a4b631290a5fd68e85b7021d2084_v28_0",
-      "e3bd5e084085446acd2d0c15d489d718_v28_1"
+      "e3bd5e084085446acd2d0c15d489d718_v28_1",
+      "a6582791b5baca4d9a33c9a0b003979e_v29_0",
+      "b6fbcd6cd4b77b03299ffbc1deaa0f64_v29_1"
   ],
   "漫画台":[
       "eb061854cc639ca822a94b54fd48d1ed_v26_0",
@@ -220,7 +249,9 @@
       "5531a3de321522343c8af8d10ce49560_v27_0",
       "bd454a50ae3ba643d4b6b43c88a41217_v27_1",
       "169586149c3a8d9e1e17e647bf52c260_v28_0",
-      "f8f6cf55045b2acd7fa00eb073e3593c_v28_1"
+      "f8f6cf55045b2acd7fa00eb073e3593c_v28_1",
+      "d380eccbfb8f481ea6c950343407f777_v29_0",
+      "55602545a314b1c9fe45876eefd1762c_v29_1"
   ],
   "最次元":[
       "6099e4552e88e28bf2419165afa26e4c_v26_0",
@@ -228,7 +259,9 @@
       "a97a8db9d2cf6c6757159a3260245dea_v27_0",
       "391764322e74dae925aaa30e5256b507_v27_1",
       "70ee2d181027eb9746e2b476b8f97cde_v28_0",
-      "3ffbab5eafb8ca3da333500810240cf3_v28_1"
+      "3ffbab5eafb8ca3da333500810240cf3_v28_1",
+      "2fd41db0c6809563d2de015b1dc585af_v29_0",
+      "ef91700b0eb5445c1cbd91ade13dd446_v29_1"
   ],
   "G站漫画":[
       "bf94af5b05f0005903965f056708ca77_v26_0",
@@ -236,7 +269,9 @@
       "f24c45b086928adf306cbe98248d2b82_v27_0",
       "7b702e28f7864789d6126491e2b66aef_v27_1",
       "8fae45ea4aa8fda1bdd3edcc26a236f4_v28_0",
-      "6f797110a5d0a2dec9e3a3538e81a9ea_v28_1"
+      "6f797110a5d0a2dec9e3a3538e81a9ea_v28_1",
+      "4c95c54f0c43696bf1d16cd73e8aed94_v29_0",
+      "78b43b3e67448007117edce0c01536d3_v29_1"
   ],
   "笔趣阁":[
       "7083d255c75267deeb84d07f7b6923b5_v26_0",
@@ -244,7 +279,9 @@
       "3ce3ae68f8a63eccc2f95610cbc541ed_v27_0",
       "40e5f52a503cd8165c5df9329410a2f3_v27_1",
       "b82d7dbe9a9a7153253d438cf1862cfd_v28_0",
-      "ddd0d7e9b5a24139561859cf7ee790f5_v28_1"
+      "ddd0d7e9b5a24139561859cf7ee790f5_v28_1",
+      "f025a9a52678162791a4a8cc8a89e3b8_v29_0",
+      "a2776a3bea50400331cf62aa77f2d3ac_v29_1"
   ],
   "漫画屋":[
       "e97d533f7b34a3070a88ddaaf1a62cf0_v26_0",
@@ -252,7 +289,9 @@
       "cd135d0917224d9a27280df558bad3b1_v27_0",
       "76a16e4ba637ffc7575ee833d33abc28_v27_1",
       "bc24747861a93940363dfef3bd3addf4_v28_0",
-      "8be39b2cc50dfd8a912628d181a6f1ad_v28_1"
+      "8be39b2cc50dfd8a912628d181a6f1ad_v28_1",
+      "c3be2e33073e91d2987e1f45d24b020c_v29_0",
+      "943d93f721ee47809c9ddd4baddf4fa3_v29_1"
   ],
   "如漫画":[
       "b074767aa04006e0d0f8d47e8a79f97f_v26_0",
@@ -262,7 +301,9 @@
       "881dc0fae144af146c2a3c14b52e5cdd_v28_0",
       "85d4cc5e7eff38e5902cfcb46283ceaf_v28_1",
       "f5b98f306dec8be9e790592c22928b98_v29_0",
-      "0b9a23cc8e2d05e8b4f69948a1efe9ad_v29_1"
+      "0b9a23cc8e2d05e8b4f69948a1efe9ad_v29_1",
+      "ca36cdf0ff7ae15b6640542483d4fc1c_v29_0",
+      "a2a804f06d3172ac4eed2c7977f2c0c2_v29_1"
   ],
   "读漫屋":[
       "f84a925e8212ce5f5433bfb30bdb0c92_v27_0",
@@ -270,7 +311,9 @@
       "195759a80815ceffd4b66240f903b180_v28_0",
       "edbb2f83a00d4312ee150c8d10153a93_v28_1",
       "c54984dd740b259ec24b62e4e335cbbd_v29_0",
-      "c5bf816317ac61dc90060a593b60e279_v29_1"
+      "c5bf816317ac61dc90060a593b60e279_v29_1",
+      "205feb2ded12cb8db243c51e688a47f6_v29_0",
+      "f1d40f0ffed27bb4249bd2aaf0fec346_v29_1"
   ],
   "新新漫画":[
       "4a48150a3af3e2fc6c086761bacd0c06_v26_0",
@@ -278,7 +321,9 @@
       "6a77da116e7dd35b42741e6d3396de4f_v27_0",
       "e1229781afa525d3ec9b0ab087bcc2f5_v27_1",
       "9b27b0591cbd220c9861b09411404399_v28_0",
-      "d13314197210b6fbcb5c23fbff8ffb1a_v28_1"
+      "d13314197210b6fbcb5c23fbff8ffb1a_v28_1",
+      "b1bf87f2b700ed27d0d3e459e1d24ca3_v29_0",
+      "a68009792c59dc155774fec54852b811_v29_1"
   ],
   "皮皮漫画":[
       "e9db3302fa888664a0487ed67171526f_v26_0",
@@ -286,7 +331,9 @@
       "ff5706262cde713e3bf68262bab2e901_v27_0",
       "d0b77767a27e0f9ac26755e1f7630689_v27_1",
       "43e481120a459b05bf83ecfeca3f45dd_v28_0",
-      "436286f1a8c28997bc284a1e5d682db6_v28_1"
+      "436286f1a8c28997bc284a1e5d682db6_v28_1",
+      "41798970f93747fb8a12197c5cc2f381_v29_0",
+      "1e30ab93ee6e6e592b56c88809426178_v29_1"
   ],
   "嗨皮漫画":[
       "e643f388deb89361104f2f6f183828a3_v26_0",
@@ -294,7 +341,9 @@
       "648911623edb1a750c80ec45317972e9_v27_0",
       "6238a6ae873bf24c1acb54d1d82082c0_v27_1",
       "0ef5bc8b6abe1d861c8e23e84efe2e00_v28_0",
-      "f67a72d59288e0d2a54f69b0dfd3776d_v28_1"
+      "f67a72d59288e0d2a54f69b0dfd3776d_v28_1",
+      "a4c78db375afe2858214866a60055024_v29_0",
+      "f44a6b2bde5264de258cce6a28e6098d_v29_1"
   ],
   "禁漫天堂":[
       "04e5a1d7f3eab7ea2287e623d94d3faa_v26_0",
@@ -305,7 +354,9 @@
       "6152b7b1642e7f593f851a4c9d5f68e5_v28_0",
       "98be09468f2f8618ffc174ef1da51318_v28_1",
       "1aacb3127f2ccc3a53f125e4b77d730a_v28_0",
-      "691b4eff39d5386dd08df621f2367a08_v28_1"
+      "691b4eff39d5386dd08df621f2367a08_v28_1",
+      "b5c667a8bf6cff9bf6c714b157ce2db6_v29_0",
+      "6ca11f18f803bc61aba7bae72c4b2b38_v29_1"
   ],
   "哔咔漫画":[
       "a4b703a725aa9d9e0a9b1bddb9ef8365_v26_0",
@@ -313,7 +364,9 @@
       "66a5a92727565ccb5b649b98672ad6e6_v27_0",
       "d1f99004f66b6d22efdc1c5f77dbc055_v27_1",
       "05380c68e9c5e4afc8ce30629b411c74_v28_0",
-      "295cefc9881c867726b3f202e08a267c_v28_1"
+      "295cefc9881c867726b3f202e08a267c_v28_1",
+      "5db9025f606ed26e2a36956ce872ef6b_v29_0",
+      "913be6ae6f7385dc67a7b33af5b73116_v29_1"
   ],
   "漫蛙":[
       "05a052b2606e0c85a15be7d6561881aa_v26_0",
@@ -322,7 +375,9 @@
       "6576f51fcc643b83accddcaff0baa557_v27_1",
       "4387ad7f129304d0a5b9b353801eb3f8_v27_1",
       "978c52b588a1e6447c4e930b890c196d_v28_0",
-      "0076019a63c3440860699eb87a7a01b1_v28_1"
+      "0076019a63c3440860699eb87a7a01b1_v28_1",
+      "18f13c1e1a23327c0b32ed68c878efda_v29_0",
+      "ecd2f2f64c371fa65b921c59599750fe_v29_1"
   ],
   "香香腐宅":[
       "aec122289fa5246dec5565bb1e9c0c12_v26_0",
@@ -330,15 +385,9 @@
       "f077e68f1519d2d4562ee777f4f8cbfa_v27_0",
       "bf507ab1ee50c31c3477f498b5a760f9_v27_1",
       "aab99be3aebcfe5b152800adb3896d99_v28_0",
-      "9a82cf04c15dcaff5d5430591eecdf37_v28_1"
-  ],
-  "九妖漫画":[
-      "3a0e3bd4e63878de9d8bd822e3f40fbe_v26_0",
-      "49e897b8cdffea68516164a1ea85ed80_v26_1",
-      "d559692ecaae68ff439a9662e31026ca_v27_0",
-      "3fed52fabf8dbf18ea45ad01235c2857_v27_1",
-      "1ee04eaa54d9d3fc3bda74d10982cdcc_v28_0",
-      "0192edfe482fcc6d321774c18b2a81de_v28_1"
+      "9a82cf04c15dcaff5d5430591eecdf37_v28_1",
+      "b8663c2261a18418f3c721c9a859f9f9_v29_0",
+      "08a18bd872bafd951dd19bd6601f1055_v29_1"
   ],
   "鸟鸟韩漫":[
       "75335b4ec8dd15294a007a6879be9ab5_v26_0",
@@ -346,15 +395,9 @@
       "48819a16881acae40d47447fd062c270_v27_0",
       "786752098543a88c8cf08ab6a2b9be32_v27_1",
       "887f81bd3a224c5b887cf8544719495d_v28_0",
-      "335ff5650455d2ed7b00a14688321feb_v28_1"
-  ],
-  "顶通漫画":[
-      "4260fa721f59fe96475333be74ccff75_v26_0",
-      "4207e59465f5d24ded3f7f48f0868b8b_v26_1",
-      "eb67bdbecdef4bd385a2ec30823ecc21_v27_0",
-      "4bef20e47a47325e05a803603d0933fd_v27_1",
-      "776d98e67384be6d4fefb2d54fa49f18_v28_0",
-      "5642cac54d00c2ded7f79ec45f8cfed7_v28_1"
+      "335ff5650455d2ed7b00a14688321feb_v28_1",
+      "0768109090710bef8d6e0c2cef254184_v29_0",
+      "70c9e3b24ba9a253264c11397090c6ef_v29_1"
   ],
   "肉漫屋":[
       "3c040d0f1e6a5fcd1b2c888d75e4603a_v26_0",
@@ -362,7 +405,9 @@
       "4dd23681acd3723faf687ce7e497c178_v27_0",
       "40af35824eeda52ae4cf14bded2418b3_v27_1",
       "128522816660823220ef4ca8f4700e34_v28_0",
-      "07a29a7d416d827e9dd57d81e8e0b742_v28_1"
+      "07a29a7d416d827e9dd57d81e8e0b742_v28_1",
+      "cbf14db7da46df01754750b443a1aa27_v29_0",
+      "4d146927a78d185b8bacead7400a7226_v29_1"
   ],
   "爱看漫画":[
       "11d38c442986b886d6f516534c21111e_v26_0",
@@ -370,7 +415,9 @@
       "3b7847a13fde5bd71fb09855fc1ed710_v27_0",
       "64b24cf5ef307e4d719a0bd24d1d27ea_v27_1",
       "5dd4312380660dc973fbeb6d3fbe8033_v28_0",
-      "7fb5078cc09fc5a72ca92adb7a4f7b6b_v28_1"
+      "7fb5078cc09fc5a72ca92adb7a4f7b6b_v28_1",
+      "52f64acebc3bd3331f3824992d114593_v29_0",
+      "06f303e8432edbbeb948e7c5faa6a80c_v29_1"
   ],
   "阿吧漫画":[
       "e1cc9b3284edfa07679bc3c0aad30f9e_v26_0",
@@ -378,7 +425,9 @@
       "c70654ae12b97301d926e17afcba9e63_v27_0",
       "6fcae8436529b64b36dc7ed726d9ca37_v27_1",
       "95a1ceba9d7848d01f49f201608b3df0_v28_0",
-      "888407935a8c9449e60ff78e8369621f_v28_1"
+      "888407935a8c9449e60ff78e8369621f_v28_1",
+      "2a1ace137856a354fdedeb7f7f1a9fc1_v29_0",
+      "165ec187d0fc40c9333f065e0283babf_v29_1"
   ],
   "开心看漫画":[
       "d7c1cca9a2eff5e1b6050bc3eac6fb33_v26_0",
@@ -386,7 +435,9 @@
       "6da6d405951c9b9fc359627bd54bed71_v27_0",
       "30bd7dc1b768e2fa7882d0364ea12992_v27_1",
       "875d7e778c3958ba597033ef0c4bfc73_v28_0",
-      "a7c40aac061ec45c65cf609ebb1f05d2_v28_1"
+      "a7c40aac061ec45c65cf609ebb1f05d2_v28_1",
+      "68447f11e08a1f86c261f651e7c94bd6_v29_0",
+      "b928e9b61f405bc27b26b777ec42baa4_v29_1"
   ],
   "第一韩漫":[
       "401e569409c5153b6f1845b6414dcb21_v26_0",
@@ -394,15 +445,9 @@
       "541a905af56a6eba9c1b51844d8e620f_v27_0",
       "ae261750b0fc60f95f7317c3d77a878d_v27_1",
       "8a0822f001b233f4a475d76d0e30629c_v28_0",
-      "218d7bcb2af39743cb71a30496c16cd1_v28_1"
-  ],
-  "梦游漫画":[
-      "ddc8cc06784dd904bf70e3db6b92520a_v26_0",
-      "de3a9a7b7f8f3db2ba5a6a4ba2ccc038_v26_1",
-      "6a8b779cbbeb568e9eb1bd27271c97fc_v27_0",
-      "85d57eec7943ab759461e30c4b8b9ed3_v27_1",
-      "42951e8e5e8febab0b624bc675ebffa0_v28_0",
-      "54e0164bf7614427a8e7b0033234b3a4_v28_1"
+      "218d7bcb2af39743cb71a30496c16cd1_v28_1",
+      "e81ab50fde7ce506a85153f374ccb801_v29_0",
+      "7cf25dcf8dccacf045be3b08544551a2_v29_1"
   ],
   "巴卡漫画":[
       "4d1b6cfd5b93ff0148b0095ef3ba3061_v26_0",
@@ -412,15 +457,9 @@
       "ef1745e419da4bb7471dcc9681aaead7_v28_0",
       "e2df0d0f453cd4fa3887a72a65c98718_v28_1",
       "a8f884ef5b43fecddebdd4905f5bb6ee_v28_0",
-      "c66bd6a0a917d62d14c55f426fde81ca_v28_1"
-  ],
-  "木马漫画":[
-      "b83fc7849880874f1ae35005aa1d4ea5_v26_0",
-      "8a948a73530815d5ccb5688fdf9764b9_v26_1",
-      "5dc16b61cd4a124745f75f2e19c8f077_v27_0",
-      "c0e3218b12cd949769b18cb5b405bcf1_v27_1",
-      "4594eb1eab7f90c3b622e293db1abbf9_v28_0",
-      "7c0bfcad1e58911e3aacb3f7184f8162_v28_1"
+      "c66bd6a0a917d62d14c55f426fde81ca_v28_1",
+      "112960c65485f8b9f3e43b680a6bbfb8_v29_0",
+      "0c1d12c0dde8cb1391e1410901b46b67_v29_1"
   ],
   "韩国漫画":[
       "7730571950e842090ea1a3c453553edc_v26_0",
@@ -428,7 +467,9 @@
       "df40af72c200a853d723f016891788fc_v27_0",
       "de22ed6fc2adbe63088c8faf08b948fb_v27_1",
       "70eb1f21c15ad384c870a50ce466de1c_v28_0",
-      "17ef3adc6cf2c3bf3a5185e32a8d85d7_v28_1"
+      "17ef3adc6cf2c3bf3a5185e32a8d85d7_v28_1",
+      "f33c8cd406af78ee309dbaa854f6f827_v29_0",
+      "06e9b0649b57cd3815945ed34bdbbf78_v29_1"
   ],
   "动漫之家":[
       "5ab11373fed4c40fca9805d5b47651fb_v26_0",
@@ -441,6 +482,38 @@
       "e94b12d16df752c22d88c150affd1265_v26_1",
       "9a66b523152004a722770da4f94fe819_v27_0",
       "1f4f45ebca80ea4faecc76f73b9fd8e1_v27_1"
+  ],
+  "九妖漫画":[
+      "3a0e3bd4e63878de9d8bd822e3f40fbe_v26_0",
+      "49e897b8cdffea68516164a1ea85ed80_v26_1",
+      "d559692ecaae68ff439a9662e31026ca_v27_0",
+      "3fed52fabf8dbf18ea45ad01235c2857_v27_1",
+      "1ee04eaa54d9d3fc3bda74d10982cdcc_v28_0",
+      "0192edfe482fcc6d321774c18b2a81de_v28_1"
+  ],
+  "顶通漫画":[
+      "4260fa721f59fe96475333be74ccff75_v26_0",
+      "4207e59465f5d24ded3f7f48f0868b8b_v26_1",
+      "eb67bdbecdef4bd385a2ec30823ecc21_v27_0",
+      "4bef20e47a47325e05a803603d0933fd_v27_1",
+      "776d98e67384be6d4fefb2d54fa49f18_v28_0",
+      "5642cac54d00c2ded7f79ec45f8cfed7_v28_1"
+  ],
+  "梦游漫画":[
+      "ddc8cc06784dd904bf70e3db6b92520a_v26_0",
+      "de3a9a7b7f8f3db2ba5a6a4ba2ccc038_v26_1",
+      "6a8b779cbbeb568e9eb1bd27271c97fc_v27_0",
+      "85d57eec7943ab759461e30c4b8b9ed3_v27_1",
+      "42951e8e5e8febab0b624bc675ebffa0_v28_0",
+      "54e0164bf7614427a8e7b0033234b3a4_v28_1"
+  ],
+  "木马漫画":[
+      "b83fc7849880874f1ae35005aa1d4ea5_v26_0",
+      "8a948a73530815d5ccb5688fdf9764b9_v26_1",
+      "5dc16b61cd4a124745f75f2e19c8f077_v27_0",
+      "c0e3218b12cd949769b18cb5b405bcf1_v27_1",
+      "4594eb1eab7f90c3b622e293db1abbf9_v28_0",
+      "7c0bfcad1e58911e3aacb3f7184f8162_v28_1"
   ],
   "失效":[
       "3bc51255a5b2343786f221acaf9bf587",
@@ -456,7 +529,9 @@
       "d0f6b6675379a2b0bc0ca22b3ce4f2bb_v14q_0",
       "8d7377af32ba5e4518f23fb1ae94b652_v14q_1",
       "997cbe1565cd46d0ab875f5c476ad798_v15q_0",
-      "a3987c4cbcbb8ae9762d031f67cbce86_v15q_1"
+      "a3987c4cbcbb8ae9762d031f67cbce86_v15q_1",
+      "67ec9991d93f9b56d93394e3da77b89d_v16q_0",
+      "472b2db9e1dbae95e3e682ea0262d3a4_v16q_1"
   ],
   "第一版主":[
       "fb668e3fa8f095448d4e9e1eff117ff9_v13q_0",
@@ -464,7 +539,9 @@
       "fb668e3fa8f095448d4e9e1eff117ff9_v14q_0",
       "f36ba86fecc47d7b06d98f6a172f2467_v14q_1",
       "c4aafd76a67b82ccd7a7fbb6b4bf7d4d_v15q_0",
-      "d5e34f211175e34efce90301f4c1e807_v15q_1"
+      "d5e34f211175e34efce90301f4c1e807_v15q_1",
+      "6b178b0da1dfd05c6eb4daff98f730fc_v16q_0",
+      "24aae83219077325903193ecb527f61e_v16q_1"
   ],
   "UAA小说":[
       "e101d75a4fb06fd005b45d4b43f0f99a_v13q_0",
@@ -475,7 +552,9 @@
       "a0018345c7481ecc147281a881693506_v14q_1",
       "1bcc6ca75e5282da847260bffff61ee1_v15q_0",
       "afa19dae8decd0d0246f9663d52e4edf_v15q_1",
-      "cbdb89bcd78d32bdac50cfb95b1c7fc0_v15q_1"
+      "cbdb89bcd78d32bdac50cfb95b1c7fc0_v15q_1",
+      "ff2b74aa6e49e037aca3a4dd043f9967_v16q_0",
+      "c94930159a1c24638167370bf854b6c7_v16q_1"
   ],
   "UAA禁漫":[
       "d21af1fbfb122f47e880a035a11b9dee_v13q_0",
@@ -483,7 +562,9 @@
       "d21af1fbfb122f47e880a035a11b9dee_v14q_0",
       "500b03ca83ea5476db0b80e10b297886_v14q_1",
       "48093a45e352bba86aa1b9db22749976_v15q_0",
-      "dd4f4b677fc1a55a91e99e1fe846d275_v15q_1"
+      "dd4f4b677fc1a55a91e99e1fe846d275_v15q_1",
+      "c8c5b1763cd0c88d4ad62ea82e68aedd_v16q_0",
+      "4940546e1a0130a449c95b2a07830854_v16q_1"
   ],
   "UAA有声":[
       "aab2008131fd44e32b000be5dc15d473_v13q_0",
@@ -491,17 +572,81 @@
       "aab2008131fd44e32b000be5dc15d473_v14q_0",
       "0e1091c3a878d8a385a2688204cd1f36_v14q_1",
       "ce5a3be089506a1b4cd58a47edb67515_v15q_0",
-      "ac721b1d2a02223f62311d0c108f8881_v15q_1"
+      "ac721b1d2a02223f62311d0c108f8881_v15q_1",
+      "d1ac20975e95d8e7b8db27f2ae10160a_v16q_0",
+      "4583f010a2edacc07ac65209d4755867_v16q_1"
   ],
   "西瓜卡通":[
       "e9317c4c1af47ef67d5a1d7136343ffa_v17d_0",
       "32afa626769b422305a20d3ec6a34c5e_v17q_1",
       "87a71512ca0fa4ab76ee2f55aabba804_v17d_0",
-      "1f24d1e54f938012a0fba9f1df4aa5e4_v17q_1"
+      "1f24d1e54f938012a0fba9f1df4aa5e4_v17q_1",
+      "bd050869f19ee86557d584d67baead38_v18d_0",
+      "85a282dbd9ca3515bdbc6eb2c83e0c27_v18q_1"
   ],
   "樱花动漫":[
       "7e7d0ff88c13df5bad6520814fdde76b_v18d_0",
-      "34bd6ab61a16b08739ddd6d36c181713_v18q_1"
+      "34bd6ab61a16b08739ddd6d36c181713_v18q_1",
+      "ae5be5c8396f45d441052bf2211d4b83_v18d_0",
+      "29472f290ed5a510f7dbc30160d2266f_v18q_1"
+  ],
+  "肉视频":[
+      "decd5d4c787a6a829c8c8c87aae673d5_v16d_0",
+      "e09698906fd6eeca2136ceb35ad6244a_v16q_1",
+      "51a8a90dd2c9df9583105f313ea789ad_v17d_0",
+      "a55589b0cc420866c60c21973e66a4f2_v17q_1",
+      "4c4b66434910b17570399a310ed2fd9d_v18d_0",
+      "a8120c96983cb9a82c83dc6e9bdcfcaf_v18q_1"
+  ],
+  "UAA视频":[
+      "1f2597e3c9ec54d8546bf41af3bbb484_v16d_0",
+      "567fdc52121bbbedb86a7731403005cd_v16q_1",
+      "7dc1b71c7cf4aef3a14264933bc40fe8_v16d_0",
+      "072a82fa29c8e3a9bfc12ab388f73d1e_v16q_1",
+      "c7f2b11d5efd03fcc23cc244a3b672ab_v17d_0",
+      "5bee8d86fb2682b59c22429e75ba2daa_v17q_1",
+      "83116e6a20fc21e0de18f97bc05957d1_v18d_0",
+      "ec929cc8ceced66474b544274f2e05b0_v18q_1"
+  ],
+  "Hanime1":[
+      "f64ae494483ac6d2d0fbc02bbd14596c_v16d_0",
+      "f166819390174a9e1be27172a2b502d3_v16q_1",
+      "5312810af3326df29f24e8307bf00135_v17d_0",
+      "f01f35a58786f3ef24619b9284351cbb_v17q_1",
+      "946b9691f7d5142fabe00a8ed670b0ce_v18d_0",
+      "98aacf08600271a76695cffc2b71ba01_v18q_1"
+  ],
+  "Jable.tv":[
+      "78f3e2590f2a16548ed37695f9432f56_v16d_0",
+      "4ff79779fceee3a6df3e52be031bc4ec_v16q_1",
+      "738c814bef339b85d5224b088cc3dfff_v17d_0",
+      "d83154fadfae7a6e7d2929cfa4202520_v17q_1",
+      "e12723a85e276134c38e7cbe0000985e_v18d_0",
+      "29d9c99475967ffa829c016ed4ba2c19_v18q_1"
+  ],
+  "MISSAV":[
+      "caaaa10d51a027163c9b2bf9b0459406_v16d_0",
+      "b60c68799db99477acf60c981a6e7ad3_v16q_1",
+      "e7e1c03d023434454a2147eafdd87f4d_v17d_0",
+      "f9d46aa8617c83612d46b55b9647c30c_v17q_1",
+      "19b3cebd11942de00a9816b47f73ed20_v18d_0",
+      "99520eb77ee0cca501e1a24406a25348_v18q_1"
+  ],
+  "RULE34Ⓥ":[
+      "e4bcd93de3709351fc2af6575c5e95f6_v16d_0",
+      "edc72cf7bcd3d34442508f25c62dd785_v16q_1",
+      "2d4a02a2a8ec2a6f2235f0f5b542ae45_v17d_0",
+      "2e27e76f6f97754941f31a7e481f55bb_v17q_1",
+      "0d814f560b2a2d588ca7325564e5ed5f_v18d_0",
+      "a05c003f2c0bc6e81971b11c741f8f45_v18q_1"
+  ],
+  "RULE34Ⓖ":[
+      "c8cac9b31fc550175d8de900e4b7f52e_v16d_0",
+      "28fd0352341b1914d363ef9e82344a9a_v16q_1",
+      "83dae0867f88b147fff30c07692f1623_v17d_0",
+      "41a154fa6ad4d95537a7719705481efb_v17q_1",
+      "4491cc37fab5ed7600db0939cb4f5c8b_v18d_0",
+      "896eaec74b82e559273863bf1c809757_v18q_1"
   ],
   "囧次元(纯净版)":[
       "f2a5a2c08eddbb3a3d2b57d05f7d54be_v16d_0",
@@ -516,49 +661,5 @@
       "14d11a2581e8d3e184d3fdc8b64228aa_v16q_1",
       "87a71512ca0fa4ab76ee2f55aabba804_v17d_0",
       "184eaa00bec901eeb90fb0af5ac993ab_v17q_1"
-  ],
-  "肉视频":[
-      "decd5d4c787a6a829c8c8c87aae673d5_v16d_0",
-      "e09698906fd6eeca2136ceb35ad6244a_v16q_1",
-      "51a8a90dd2c9df9583105f313ea789ad_v17d_0",
-      "a55589b0cc420866c60c21973e66a4f2_v17q_1"
-  ],
-  "UAA视频":[
-      "1f2597e3c9ec54d8546bf41af3bbb484_v16d_0",
-      "567fdc52121bbbedb86a7731403005cd_v16q_1",
-      "7dc1b71c7cf4aef3a14264933bc40fe8_v16d_0",
-      "072a82fa29c8e3a9bfc12ab388f73d1e_v16q_1",
-      "c7f2b11d5efd03fcc23cc244a3b672ab_v17d_0",
-      "5bee8d86fb2682b59c22429e75ba2daa_v17q_1"
-  ],
-  "Hanime1":[
-      "f64ae494483ac6d2d0fbc02bbd14596c_v16d_0",
-      "f166819390174a9e1be27172a2b502d3_v16q_1",
-      "5312810af3326df29f24e8307bf00135_v17d_0",
-      "f01f35a58786f3ef24619b9284351cbb_v17q_1"
-  ],
-  "Jable.tv":[
-      "78f3e2590f2a16548ed37695f9432f56_v16d_0",
-      "4ff79779fceee3a6df3e52be031bc4ec_v16q_1",
-      "738c814bef339b85d5224b088cc3dfff_v17d_0",
-      "d83154fadfae7a6e7d2929cfa4202520_v17q_1"
-  ],
-  "MISSAV":[
-      "caaaa10d51a027163c9b2bf9b0459406_v16d_0",
-      "b60c68799db99477acf60c981a6e7ad3_v16q_1",
-      "e7e1c03d023434454a2147eafdd87f4d_v17d_0",
-      "f9d46aa8617c83612d46b55b9647c30c_v17q_1"
-  ],
-  "RULE34Ⓥ":[
-      "e4bcd93de3709351fc2af6575c5e95f6_v16d_0",
-      "edc72cf7bcd3d34442508f25c62dd785_v16q_1",
-      "2d4a02a2a8ec2a6f2235f0f5b542ae45_v17d_0",
-      "2e27e76f6f97754941f31a7e481f55bb_v17q_1"
-  ],
-  "RULE34Ⓖ":[
-      "c8cac9b31fc550175d8de900e4b7f52e_v16d_0",
-      "28fd0352341b1914d363ef9e82344a9a_v16q_1",
-      "83dae0867f88b147fff30c07692f1623_v17d_0",
-      "41a154fa6ad4d95537a7719705481efb_v17q_1"
   ]
 }
