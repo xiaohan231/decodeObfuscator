@@ -90,9 +90,15 @@
       "\n❌激活码错误❌"
   ],
   "limits":[
-      "https://ycoo.net"
+      "https://ycoo.net",
+      "https://ycoo-tool.com",
+      "https://ycqbbs.com",
+      "https://srcbbs.com"
   ],
   "limit_keys":[
+      "YPSa_2132_",
+      "YPSa_2132_",
+      "YPSa_2132_",
       "YPSa_2132_"
   ],
   "limit_tips":[
