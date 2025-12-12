@@ -90,9 +90,11 @@
       "\n❌激活码错误❌"
   ],
   "limits":[
-      "https://pc.sysbbs.com"
+      "https://pc.sysbbs.com",
+      "https://m.sysbbs.com"
   ],
   "limit_keys":[
+      "YPSa_2132_",
       "YPSa_2132_"
   ],
   "limit_tips":[
