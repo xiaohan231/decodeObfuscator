@@ -90,10 +90,7 @@
       "\n❌激活码错误❌"
   ],
   "limits":[
-      "https://ycoo.net",
-      "https://ycoo-tool.com",
-      "https://ycqbbs.com",
-      "https://srcbbs.com"
+      "https://sysbbs.com"
   ],
   "limit_keys":[
       "YPSa_2132_",
@@ -600,6 +597,14 @@
       "e299631d43a70a8d720cd6c2be373364_v20d_0",
       "4960cc276d9b4b6e7058e307052c6615_v20q_1"
   ],
+  "袋鼠影视":[
+      "cf1c38dfef80211f68699900666648a1_v20d_0",
+      "0258cdd383c49e57f69654698efa8335_v20q_1"
+  ],
+  "樱花动漫":[
+      "e1bb71193c6e1662e3f7ce32d1aeaa2d_v20d_0",
+      "69416482482a24c186b4780d7728e8b6_v20q_1"
+  ],
   "西瓜卡通":[
       "e9317c4c1af47ef67d5a1d7136343ffa_v17d_0",
       "32afa626769b422305a20d3ec6a34c5e_v17q_1",
@@ -619,10 +624,6 @@
       "2865710d8f06517e4b93a90684f2574e_v19q_1",
       "9790a64a1cb883993f188402f88b4e01_v20d_0",
       "59f92c13c29bedeb228fb3fe68ff4fcd_v20q_1"
-  ],
-  "袋鼠影视":[
-      "cf1c38dfef80211f68699900666648a1_v20d_0",
-      "0258cdd383c49e57f69654698efa8335_v20q_1"
   ],
   "肉视频":[
       "decd5d4c787a6a829c8c8c87aae673d5_v16d_0",
