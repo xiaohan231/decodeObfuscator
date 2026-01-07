@@ -90,10 +90,12 @@
       "\n❌激活码错误❌"
   ],
   "limits":[
+      "https://ycoo.net",
       "https://pc.sysbbs.com",
       "https://m.sysbbs.com"
   ],
   "limit_keys":[
+      "YPSa_2132_",
       "YPSa_2132_",
       "YPSa_2132_"
   ],
